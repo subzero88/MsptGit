@@ -1,5 +1,6 @@
 package com.bm.mspt.buy.list;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.View;
@@ -7,9 +8,10 @@ import android.view.View;
 import com.bm.mspt.AppKey;
 import com.bm.mspt.BaseFragmentActivity;
 import com.bm.mspt.R;
+import com.bm.mspt.buy.detail.BuyDetailActivity;
 import com.bm.mspt.http.HttpService;
 import com.bm.mspt.http.bean.BuyGoodsBean;
-import com.bm.mspt.http.show.GoodsSellShowData;
+import com.bm.mspt.http.show.BuyGoodsShowData;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,8 +63,8 @@ public class BuyGoodsListActivity extends BaseFragmentActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.goods_list_content, fragment).commit();
     }
 
-    private void getData(String key) {
-        new HttpService().goodsBuyList(instance,null,currentPage,key,categoryId);
+    public void getData(String key) {
+        new HttpService().goodsBuyList(instance, new BuyGoodsShowData(this), currentPage, key, categoryId);
     }
 
     /**
@@ -96,5 +98,42 @@ public class BuyGoodsListActivity extends BaseFragmentActivity {
             bigFragment = new BuyListBigFragment();
         }
         return bigFragment;
+    }
+
+    public List<BuyGoodsBean.BuyGoods> getBuyGoodses() {
+        return buyGoodses;
+    }
+
+    /**
+     * 添加数据
+     * @param goodsData:商品数据
+     */
+    public void addList(BuyGoodsBean.BuyGoodsData goodsData) {
+        if (goodsData != null && goodsData.getInfo() != null) {
+            currentPage = goodsData.getCurrentpage()+1;
+            this.buyGoodses.addAll(goodsData.getInfo());
+            notifyAdapter();
+        }
+    }
+
+    /**
+     * 刷新适配器
+     */
+    private void notifyAdapter() {
+        if (currentFragment instanceof BuyListLittleFragment) {
+            ((BuyListLittleFragment)currentFragment).notifyAdapter();
+        } else if (currentFragment instanceof BuyListBigFragment) {
+            ((BuyListBigFragment)currentFragment).notifyAdapter();
+        }
+    }
+
+    /**
+     * 跳转详情
+     * @param i:行号
+     */
+    public void gotoDetail(int i) {
+        Intent intent = new Intent(this, BuyDetailActivity.class);
+        intent.putExtra(AppKey.INTENT_KEY_GOODSDETAIL_ID, buyGoodses.get(i).getContent_id());
+        startActivity(intent);
     }
 }

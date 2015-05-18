@@ -108,7 +108,7 @@
     <dimen name="adapter_goods_list_little_txt_margin_top">11dp</dimen>
     <dimen name="adapter_goods_list_little_type_margin_top">4dp</dimen>
     <dimen name="adapter_goods_list_little_txt_name">13sp</dimen>
-    <dimen name="adapter_goods_list_little_ratingbar_margin_top">13dp</dimen>
+    <dimen name="adapter_goods_list_little_ratingbar_margin_top">11dp</dimen>
     <!-- 供货分类 -->
     <dimen name="fragment_sell_listview_width">125dp</dimen>
     <dimen name="fragment_sell_gv_two_vertical_spacing">15dp</dimen>
@@ -388,5 +388,8 @@
     <dimen name="adapter_comment_padding_bottom">5dp</dimen>
     <dimen name="adapter_comment_info_margin_top">9dp</dimen>
     <dimen name="adapter_comment_info_textsize">11sp</dimen>
+    <dimen name="adapter_buy_big_height">184dp</dimen>
+    <dimen name="adapter_buy_big_name_margin_top">6dp</dimen>
+    <dimen name="activity_buy_detail_info_margin_left">94dp</dimen>
 
 </resources>

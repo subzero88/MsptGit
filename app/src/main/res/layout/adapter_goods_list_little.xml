@@ -13,15 +13,15 @@
 
     <TextView
         android:id="@+id/adapter_goods_list_little_name_txt"
-        android:text="@string/test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:singleLine="true"
         android:ellipsize="end"
+        android:text="@string/test"
         android:textSize="@dimen/adapter_goods_list_little_txt_name"
         android:textColor="@color/black_adapter_little_name"
-        android:layout_marginLeft="@dimen/adapter_goods_list_little_txt_margin_left"
         android:layout_marginTop="@dimen/adapter_goods_list_little_txt_margin_top"
+        android:layout_marginLeft="@dimen/adapter_goods_list_little_txt_margin_left"
         android:layout_marginRight="@dimen/adapter_goods_list_little_numend_margin_right"/>
 
     <TextView

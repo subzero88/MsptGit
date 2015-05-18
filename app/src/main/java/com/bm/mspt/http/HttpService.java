@@ -14,6 +14,7 @@ import com.bm.mspt.http.bean.AddEditAddressBean;
 import com.bm.mspt.http.bean.AddressBean;
 import com.bm.mspt.http.bean.AdvertBean;
 import com.bm.mspt.http.bean.AreaBean;
+import com.bm.mspt.http.bean.BuyGoodsBean;
 import com.bm.mspt.http.bean.CartAddBean;
 import com.bm.mspt.http.bean.CollectionBean;
 import com.bm.mspt.http.bean.CommentBean;
@@ -310,10 +311,10 @@ public class HttpService {
      * @param key:搜索关键字
      * @param categoryId:分类id
      */
-    public void goodsBuyList(Activity activity, ShowData<GoodsBean> showData, int page, String key, String categoryId) {
+    public void goodsBuyList(Activity activity, ShowData<BuyGoodsBean> showData, int page, String key, String categoryId) {
         Dialog dialog = new ProgressDialog(activity);
 
-        BaseRequest.Holder<GoodsBean> holder = new BaseRequest.Holder<>();
+        BaseRequest.Holder<BuyGoodsBean> holder = new BaseRequest.Holder<>();
         holder.setUrl(HOST)
                 .setActivity(activity)
                 .setParam(APP_KEY, "Buy")
@@ -327,7 +328,7 @@ public class HttpService {
                 .setDialog(dialog)
                 .setShowData(showData);
         dialog.show();
-        HttpConnect.getInstance().add(new GsonRequest(holder, GoodsBean.class));
+        HttpConnect.getInstance().add(new GsonRequest(holder, BuyGoodsBean.class));
     }
 
     /**

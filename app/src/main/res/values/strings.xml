@@ -173,6 +173,10 @@
     <string name="evaluation_too_much">评价信息太长了</string>
     <string name="evaluation_commit_success">评价成功</string>
     <string name="cartadd_error">加入失败</string>
+    <string name="activity_buy_detail_phone">卖家联系方式</string>
+    <string name="activity_buy_detail_store">商家</string>
+    <string name="activity_buy_detail_buyman">买家姓名</string>
+    <string name="buy_detail">求购商品详情</string>
 
 
 </resources>

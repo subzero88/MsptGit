@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.bm.mspt.AppKey;
 import com.bm.mspt.R;
+import com.bm.mspt.buy.list.BuyGoodsListActivity;
 import com.bm.mspt.http.HttpService;
 import com.bm.mspt.http.show.GoodsTypeShowData;
 import com.bm.mspt.sell.list.GoodsListActivity;
@@ -19,8 +20,7 @@ public class BuyFragment extends SellFragment {
 
     @Override
     protected void moveToGoodsList(int i) {
-        Intent intent = new Intent(getActivity(), GoodsListActivity.class);
-        intent.putExtra(AppKey.INTENT_KEY_GOODSLIST_TYPE, AppKey.INTENT_VALUE_GOODSLIST_TYPE_NORMAL);
+        Intent intent = new Intent(getActivity(), BuyGoodsListActivity.class);
         intent.putExtra(AppKey.INTENT_KEY_GOODSLIST_TYPE_ID, adapterTwo.getItem(i).getCategory_id());
         getActivity().startActivity(intent);
     }

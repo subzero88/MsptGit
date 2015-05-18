@@ -41,7 +41,7 @@
             android:theme="@android:style/Theme.NoTitleBar" />
 
 
-        <activity android:name=".sell.AddressManagementActivity"/>
+        <activity android:name=".sell.AddressManagementActivity" />
         <activity
             android:name=".shop.TestActivity"
             android:theme="@android:style/Theme.NoTitleBar" />
@@ -104,6 +104,16 @@
         <activity
             android:name=".sell.detail.OrderActivity"
             android:label="@string/order_title"
+            android:screenOrientation="portrait" />
+        <!-- 求购列表 -->
+        <activity
+            android:name=".buy.list.BuyGoodsListActivity"
+            android:label="@string/index_buy"
+            android:screenOrientation="portrait" />
+        <!-- 求购商品详情 -->
+        <activity
+            android:name=".buy.detail.BuyDetailActivity"
+            android:label="@string/buy_detail"
             android:screenOrientation="portrait" />
     </application>
 

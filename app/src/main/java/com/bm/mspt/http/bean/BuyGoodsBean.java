@@ -12,11 +12,52 @@ public class BuyGoodsBean extends BaseBean {
 
     private BuyGoodsData data;
 
+    public BuyGoodsData getData() {
+        return data;
+    }
+
+    public void setData(BuyGoodsData data) {
+        this.data = data;
+    }
+
     public class BuyGoodsData {
         private String totalnum; // 总数
-        private String currentpage; // 当前页
+        private int currentpage; // 当前页
         private String totalpage; // 总页数
         private List<BuyGoods> info; // 商品
+
+        public int getCurrentpage() {
+            return currentpage;
+        }
+
+        public void setCurrentpage(int currentpage) {
+            this.currentpage = currentpage;
+        }
+
+        public String getTotalnum() {
+            return totalnum;
+        }
+
+        public void setTotalnum(String totalnum) {
+            this.totalnum = totalnum;
+        }
+
+
+        public String getTotalpage() {
+            return totalpage;
+        }
+
+        public void setTotalpage(String totalpage) {
+            this.totalpage = totalpage;
+        }
+
+        public List<BuyGoods> getInfo() {
+            return info;
+        }
+
+        public void setInfo(List<BuyGoods> info) {
+            this.info = info;
+        }
     }
 
     /**

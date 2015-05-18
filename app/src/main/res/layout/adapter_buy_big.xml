@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/adapter_buy_big_height"
+    android:layout_gravity="center"
+    android:background="@drawable/goods_list_big_bg">
+
+    <ImageView
+        android:id="@+id/adapter_buy_big_img"
+        android:layout_width="@dimen/common_list_item_big_img_width"
+        android:layout_height="@dimen/common_list_item_big_img_height"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/common_list_item_big_img_margin_top" />
+
+    <TextView
+        android:id="@+id/adapter_buy_big_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adapter_buy_big_img"
+        android:layout_marginTop="@dimen/adapter_buy_big_name_margin_top"
+        android:layout_marginLeft="@dimen/common_list_item_big_txt_margin_left"
+        android:layout_marginRight="@dimen/common_list_item_big_txt_margin_right"
+        android:text="@string/test"
+        android:textColor="@color/gray_goods_list_name"
+        android:textSize="@dimen/common_list_item_big_txt_name"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+</RelativeLayout>
