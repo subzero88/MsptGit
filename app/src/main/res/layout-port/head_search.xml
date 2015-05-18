@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_head_height"
+    android:background="@drawable/common_head_bg">
+
+    <RelativeLayout
+        android:layout_width="@dimen/common_head_search_width"
+        android:layout_height="@dimen/common_head_search_height"
+        android:layout_centerInParent="true"
+        android:background="@drawable/index_search_bg">
+
+        <EditText
+            android:id="@+id/head_edt"
+            style="@style/head_edt"
+            android:layout_width="@dimen/common_head_edt_width"
+            android:layout_height="@dimen/common_head_edt_height"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

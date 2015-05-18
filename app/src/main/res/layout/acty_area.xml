@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_normal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_area_textView_height"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/select_your_area"
+        android:id="@+id/acty_area_textView"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical|left"
+        android:textColor="@color/black"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/acty_area_listView"
+        android:layout_below="@+id/acty_area_textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</LinearLayout>

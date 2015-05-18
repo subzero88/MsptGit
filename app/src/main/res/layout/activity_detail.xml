@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/activity_detail_head"
+        layout="@layout/head_normal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_detail_head"
+        android:layout_above="@+id/activity_detail_bottom">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/activity_detail_top"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_detail_viewpager_height">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/activity_detail_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <com.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/activity_detail_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:radius="@dimen/indicator_corner_radius"
+                    app:fillColor="@color/orange"
+                    app:pageColor="@color/gray_index_indicator"
+                    app:strokeColor="@android:color/transparent"
+                    android:padding="@dimen/index_banners_indication_padding"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/index_banners_indicatior_margin_right"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/activity_detail_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity_detail_top"
+                android:padding="@dimen/activity_detail_info_layout_padding">
+
+                <TextView
+                    android:id="@+id/activity_detail_txt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/test"
+                    android:textColor="@color/black_activity_detail_name"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/activity_detail_store"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_detail_txt_name"
+                    android:layout_marginTop="@dimen/activity_detail_store_margin_top"
+                    android:text="@string/activity_detail_store"
+                    android:textSize="@dimen/activity_detail_store_txt"
+                    android:textColor="@color/gray_activity_detail_store" />
+
+                <TextView
+                    android:id="@+id/activity_detail_txt_store"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_detail_txt_name"
+                    android:layout_marginTop="@dimen/activity_detail_store_margin_top"
+                    android:layout_toRightOf="@+id/activity_detail_phone"
+                    android:text="@string/test"
+                    android:textSize="@dimen/activity_detail_store_txt"
+                    android:textColor="@color/black_activity_detail_name" />
+
+                <TextView
+                    android:id="@+id/activity_detail_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_detail_store"
+                    android:layout_marginTop="@dimen/activity_detail_phone_margin_top"
+                    android:text="@string/activity_detail_phone"
+                    android:textSize="@dimen/activity_detail_store_txt"
+                    android:textColor="@color/gray_activity_detail_store" />
+
+                <TextView
+                    android:id="@+id/activity_detail_txt_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_detail_store"
+                    android:layout_marginTop="@dimen/activity_detail_phone_margin_top"
+                    android:layout_toRightOf="@id/activity_detail_phone"
+                    android:text="@string/test"
+                    android:textSize="@dimen/activity_detail_store_txt"
+                    android:textColor="@color/black_activity_detail_name" />
+
+                <TextView
+                    android:id="@+id/activity_detail_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_detail_phone"
+                    android:layout_marginTop="@dimen/activity_detail_price_margin_top"
+                    android:textSize="@dimen/activity_detail_price_txt"
+                    android:text="@string/common_rmb"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/activity_detail_txt_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_detail_phone"
+                    android:layout_marginTop="@dimen/activity_detail_price_margin_top"
+                    android:layout_toRightOf="@id/activity_detail_price"
+                    android:textSize="@dimen/activity_detail_price_txt"
+                    android:text="@string/test"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/activity_detail_oldprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/activity_detail_txt_price"
+                    android:layout_marginLeft="@dimen/activity_detail_oldprice_margin_left"
+                    android:textColor="@color/black_activity_detail_name"
+                    android:text="@string/test"
+                    android:textSize="@dimen/activity_detail_oldprice_txt"
+                    android:layout_alignBottom="@id/activity_detail_txt_price" />
+
+                <RatingBar
+                    android:id="@+id/activity_detail_ratingbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/activity_detail_rating_bar_height"
+                    android:progressDrawable="@drawable/common_list_rating_bar"
+                    android:numStars="5"
+                    android:clickable="false"
+                    android:isIndicator="true"
+                    android:stepSize="1"
+                    android:layout_below="@id/activity_detail_price"
+                    android:layout_marginTop="@dimen/activity_detail_rating_margin_top" />
+
+                <TextView
+                    android:id="@+id/activity_detail_txt_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/activity_detail_rating_txt"
+                    android:text="@string/test"
+                    android:layout_toRightOf="@id/activity_detail_ratingbar"
+                    android:layout_marginLeft="@dimen/activity_detail_txt_rating_margin_left"
+                    android:layout_alignBottom="@id/activity_detail_ratingbar"
+                    android:textColor="@color/orange" />
+
+                <View
+                    android:id="@+id/activity_detail_view_center"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/activity_detail_sellnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue_goods_list_num"
+                    android:text="@string/test"
+                    android:textSize="@dimen/activity_detail_rating_txt"
+                    android:layout_alignBottom="@id/activity_detail_txt_rating"
+                    android:layout_toLeftOf="@id/activity_detail_view_center" />
+
+                <TextView
+                    android:id="@+id/activity_detail_sellnum_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/common_list_lv_num_end"
+                    android:textColor="@color/gray_goods_list_num_end"
+                    android:textSize="@dimen/activity_detail_rating_txt"
+                    android:layout_alignBottom="@id/activity_detail_txt_rating"
+                    android:layout_toRightOf="@id/activity_detail_view_center" />
+
+                <RelativeLayout
+                    android:id="@+id/activity_detail_layout_keep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/activity_detail_txt_rating"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:id="@+id/activity_detail_keep_head"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="@string/activity_detail_keep_head"
+                        android:textSize="@dimen/activity_detail_rating_txt"
+                        android:textColor="@color/gray_goods_list_num_end" />
+
+                    <TextView
+                        android:id="@+id/activity_detail_txt_keep"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/test"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/activity_detail_rating_txt"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toRightOf="@id/activity_detail_keep_head"
+                        android:layout_marginLeft="@dimen/activity_detail_txt_keep_margin_left" />
+
+                    <Button
+                        android:id="@+id/activity_detail_btn_keep"
+                        android:layout_width="@dimen/activity_detail_keep_img_width"
+                        android:layout_height="@dimen/activity_detail_keep_img_height"
+                        android:background="@drawable/detail_favourite_sel"
+                        android:layout_centerHorizontal="true"
+                        android:layout_above="@id/activity_detail_keep_head"
+                        android:layout_marginBottom="@dimen/activity_detail_keep_img_margin_bottom" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/activity_detail_introduction_head_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_detail_introduction"
+                android:background="@color/gray_activity_detail_introduction"
+                android:layout_below="@id/activity_detail_info_layout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_detail_info_layout_padding"
+                    android:text="@string/activity_detail_introducetion"
+                    android:textSize="@dimen/activity_detail_rating_txt"
+                    android:textColor="@color/black_activity_detail_name" />
+
+                <Button
+                    android:id="@+id/activity_detail_introduction_btn"
+                    android:layout_width="@dimen/activity_detail_introduction_btn_width"
+                    android:layout_height="@dimen/activity_detail_introduction_btn_height"
+                    android:background="@drawable/detail_introduction_sel"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/activity_detail_info_layout_padding"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/activity_detail_introduction_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_detail_introduction_head_layout"
+                android:padding="@dimen/activity_detail_info_layout_padding">
+
+                <TextView
+                    android:id="@+id/activity_detail_introduction_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:lineSpacingExtra="@dimen/activity_detail_introduction_txt_space"
+                    android:text="@string/test"
+                    android:textSize="@dimen/activity_detail_rating_txt"
+                    android:textColor="@color/gray_activity_detail_introduction_info" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/activity_detail_assess_head_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_detail_introduction"
+                android:background="@color/gray_activity_detail_introduction"
+                android:layout_below="@id/activity_detail_introduction_layout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_detail_info_layout_padding"
+                    android:text="@string/activity_detail_assess"
+                    android:textSize="@dimen/activity_detail_rating_txt"
+                    android:textColor="@color/black_activity_detail_name" />
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/activity_detail_assess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_detail_assess_head_layout"
+                style="@style/common_goods_list_lv" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/activity_detail_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/activity_detail_btn_buy"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/activity_detail_bottom_height"
+            android:layout_weight="1"
+            android:background="@drawable/detail_buy_btn" />
+
+        <Button
+            android:id="@+id/activity_detail_btn_shop"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/activity_detail_bottom_height"
+            android:layout_weight="1"
+            android:background="@drawable/detail_keep_btn" />
+
+    </LinearLayout>
+
+</RelativeLayout>

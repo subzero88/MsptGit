@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_left_btn" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/acty_wait_evaluation_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/acty_wait_evaluation_name_to_left"
+            android:layout_marginTop="@dimen/acty_wait_evaluation_name_to_top"
+            android:text="买一送一猫粮"
+            android:textColor="@color/black"
+            android:textSize="@dimen/acty_wait_evaluation_name_textsize" />
+
+        <TextView
+            android:id="@+id/acty_wait_evaluation_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/acty_wait_evaluation_name"
+            android:layout_below="@+id/acty_wait_evaluation_name"
+            android:layout_marginTop="@dimen/acty_wait_evaluation_total_to_name"
+            android:text="@string/acty_wait_evaluation_total"
+            android:textColor="@color/black"
+            android:textSize="@dimen/acty_wait_evaluation_total_textsize" />
+
+        <RatingBar
+            android:id="@+id/acty_wait_evaluation_total_ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/common_rating_bar_height"
+            android:layout_alignTop="@id/acty_wait_evaluation_total"
+            android:progressDrawable="@drawable/common_list_rating_bar"
+            android:layout_toRightOf="@+id/acty_wait_evaluation_total"
+            android:stepSize="1"
+            android:numStars="5"
+            android:isIndicator="true" />
+
+        <TextView
+            android:id="@+id/acty_wait_evaluation_total_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/acty_wait_evaluation_total"
+            android:layout_alignTop="@id/acty_wait_evaluation_total"
+            android:layout_toRightOf="@id/acty_wait_evaluation_total_ratingbar"
+            android:text="4.1"
+            android:gravity="center"
+            android:textColor="@color/item_collection_rating"
+            android:textSize="@dimen/acty_wait_evaluation_rating_total_textsize" />
+
+        <ImageView
+            android:id="@+id/imageViewActyWaitEvaluationSeparator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/acty_wait_evaluation_imageView_separator_height"
+            android:layout_below="@+id/acty_wait_evaluation_total"
+            android:background="@color/acty_settings_separator" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewActyWaitEvaluationSeparator">
+
+
+            <TextView
+                android:id="@+id/acty_wait_evaluation_your_evaluation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/acty_wait_evaluation_your_evaluation_to_left"
+                android:layout_marginTop="@dimen/acty_wait_evaluation_your_evaluation_to_top"
+                android:text="@string/acty_wait_evaluation_your_evaluation"
+                android:textColor="@color/black"
+                android:textSize="@dimen/acty_wait_evaluation_total_textsize" />
+
+            <RatingBar
+                android:id="@+id/acty_wait_evaluation_your_ratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common_rating_bar_height"
+                android:numStars="5"
+                android:stepSize="1"
+                android:progressDrawable="@drawable/common_list_rating_bar"
+                android:layout_alignTop="@+id/acty_wait_evaluation_your_evaluation"
+                android:layout_toRightOf="@+id/acty_wait_evaluation_your_evaluation" />
+
+            <RelativeLayout
+                android:id="@+id/acty_wait_evaluation_edittext_background"
+                android:layout_width="@dimen/acty_wait_evaluation_edittext_width"
+                android:layout_height="@dimen/acty_wait_evaluation_edittext_height"
+                android:layout_below="@+id/acty_wait_evaluation_your_ratingbar"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/acty_wait_evaluation_edittext_background"
+                android:padding="@dimen/acty_wait_evaluation_edittext_padding">
+
+                <EditText
+                    android:id="@+id/acty_wait_evaluation_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="@string/edittextHint_acty_wait_evaluation" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/acty_wait_evaluation_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

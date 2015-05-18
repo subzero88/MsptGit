@@ -1,0 +1,310 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/acty_my_mall_backgroud"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_normal" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_my_mall_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/fragment_my_mall_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/acty_my_mall_logo_base_width"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/acty_my_mall_background" />
+
+        <RelativeLayout
+            android:id="@+id/fragment_my_mall_login_false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/acty_my_mall_notlogin_to_top"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:id="@+id/linearlayout_login_registered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/acty_my_mall_notlogin_between_logo_text"
+                    android:text="@string/acty_my_mall_login"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/acty_my_mall_text_login_info" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="@dimen/acty_my_mall_separator_horizontal_width"
+                    android:layout_height="@dimen/acty_my_mall_separator_horizontal_height"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/acty_my_mall_separator_horizontal" />
+
+                <TextView
+                    android:id="@+id/textViewRegistered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/acty_my_mall_notlogin_between_logo_text"
+
+                    android:text="@string/acty_my_mall_my_registered"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/acty_my_mall_text_login_info" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearlayout_login_registered"
+                android:layout_marginTop="@dimen/acty_my_mall_notlogin_between_top_bottom"
+                android:text="@string/acty_my_mall_login_show_more"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+
+                android:textColor="#ffffff"
+                android:textSize="@dimen/acty_my_mall_text_login_info" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_my_mall_login_true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_alignLeft="@+id/imageView"
+            android:layout_alignRight="@+id/imageView"
+            android:layout_alignTop="@+id/imageView">
+
+            <TextView
+                android:id="@+id/textViewPhoneNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/acty_my_mall_phone_num_to_left"
+                android:layout_marginTop="@dimen/acty_my_mall_phone_num_to_top"
+                android:text="@string/acty_my_mall_phone_num"
+                android:textColor="#ffffff"
+
+                android:textSize="@dimen/acty_my_mall_text_login_info" />
+
+            <ImageView
+                android:id="@+id/imageViewLogoPhone"
+                android:layout_width="@dimen/acty_my_mall_logo_phone_width"
+                android:layout_height="@dimen/acty_my_mall_logo_phone_height"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/acty_my_mall_logo_phone_to_left"
+                android:layout_marginTop="@dimen/acty_my_mall_logo_phone_to_top"
+                android:src="@drawable/acty_my_mall_logo_cellphone" />
+
+            <TextView
+                android:id="@+id/textViewScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textViewPhoneNum"
+                android:layout_below="@+id/textViewPhoneNum"
+                android:layout_marginTop="@dimen/acty_my_mall_between_phone_num_score"
+                android:text="@string/acty_my_mall_score"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/acty_my_mall_text_login_info" />
+
+            <ImageView
+                android:layout_width="@dimen/acty_my_mall_logo_score_width"
+                android:layout_height="@dimen/acty_my_mall_logo_score_height"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/acty_my_mall_logo_score_to_left"
+                android:layout_marginTop="@dimen/acty_my_mall_logo_score_to_top"
+                android:src="@drawable/acty_my_mall_logo_integral" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_my_mall_account_info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_my_mall_item_account_info"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/acty_my_mall_top">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="@dimen/acty_my_mall_logo_big_width"
+            android:layout_height="@dimen/acty_my_mall_logo_big_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_my_mall_logo_account_info_to_left_border"
+            android:src="@drawable/acty_my_mall_account_info" />
+
+        <TextView
+            android:id="@+id/fragment_my_mall_account_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/my_mall_dis_between_logo_text"
+            android:layout_toEndOf="@+id/imageView2"
+            android:layout_toRightOf="@+id/imageView2"
+            android:text="@string/acty_my_mall_account_info"
+            android:textColor="@color/acty_my_mall_text_bottom"
+            android:textSize="@dimen/acty_my_mall_text_account_info" />
+
+        <ImageView
+            android:layout_width="@dimen/acty_my_mall_logo_small_width"
+            android:layout_height="@dimen/acty_my_mall_logo_small_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/acty_my_mall_logo_goto_to_right_border"
+            android:src="@drawable/acty_go_to" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/acty_my_mall_logo_goto_to_right_border"
+        android:src="@drawable/acty_my_mall_separator_vertical" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_my_mall_my_order"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_my_mall_item_account_info"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/acty_my_mall_account_info">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="@dimen/acty_my_mall_logo_big_width"
+            android:layout_height="@dimen/acty_my_mall_logo_big_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_my_mall_logo_account_info_to_left_border"
+            android:src="@drawable/acty_my_mall_my_order" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/my_mall_dis_between_logo_text"
+            android:layout_toEndOf="@+id/imageView3"
+            android:layout_toRightOf="@+id/imageView3"
+            android:text="@string/acty_my_mall_my_order"
+            android:textColor="@color/acty_my_mall_text_bottom"
+            android:textSize="@dimen/acty_my_mall_text_account_info" />
+
+        <ImageView
+            android:layout_width="@dimen/acty_my_mall_logo_small_width"
+            android:layout_height="@dimen/acty_my_mall_logo_small_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/acty_my_mall_logo_goto_to_right_border"
+            android:src="@drawable/acty_go_to" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/acty_my_mall_logo_goto_to_right_border"
+        android:src="@drawable/acty_my_mall_separator_vertical" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_my_mall_my_collection"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_my_mall_item_account_info"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/acty_my_mall_my_order">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="@dimen/acty_my_mall_logo_big_width"
+            android:layout_height="@dimen/acty_my_mall_logo_big_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_my_mall_logo_account_info_to_left_border"
+            android:src="@drawable/acty_my_mall_my_collection" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/my_mall_dis_between_logo_text"
+            android:layout_toEndOf="@+id/imageView4"
+            android:layout_toRightOf="@+id/imageView4"
+            android:text="@string/acty_my_mall_my_collection"
+            android:textColor="@color/acty_my_mall_text_bottom"
+            android:textSize="@dimen/acty_my_mall_text_account_info" />
+
+        <ImageView
+            android:layout_width="@dimen/acty_my_mall_logo_small_width"
+            android:layout_height="@dimen/acty_my_mall_logo_small_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/acty_my_mall_logo_goto_to_right_border"
+            android:src="@drawable/acty_go_to" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/acty_my_mall_logo_goto_to_right_border"
+        android:src="@drawable/acty_my_mall_separator_vertical" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_my_mall_setttings"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_my_mall_item_account_info"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/acty_my_mall_my_collection">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="@dimen/acty_my_mall_logo_big_width"
+            android:layout_height="@dimen/acty_my_mall_logo_big_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_my_mall_logo_account_info_to_left_border"
+            android:src="@drawable/acty_my_mall_settings" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/my_mall_dis_between_logo_text"
+            android:layout_toEndOf="@+id/imageView5"
+            android:layout_toRightOf="@+id/imageView5"
+            android:text="@string/acty_my_mall_settings"
+            android:textColor="@color/acty_my_mall_text_bottom"
+            android:textSize="@dimen/acty_my_mall_text_account_info" />
+
+        <ImageView
+            android:layout_width="@dimen/acty_my_mall_logo_small_width"
+            android:layout_height="@dimen/acty_my_mall_logo_small_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/acty_my_mall_logo_goto_to_right_border"
+            android:src="@drawable/acty_go_to" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/acty_my_mall_logo_goto_to_right_border"
+        android:src="@drawable/acty_my_mall_separator_vertical" />
+</LinearLayout>
+
+

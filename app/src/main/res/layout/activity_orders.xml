@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_search_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_orders_tabs_height"
+        android:orientation="horizontal">
+
+        <com.bm.mspt.shop.orders.ViewActyOrdersTabHead
+            android:id="@+id/activity_orders_tabhead1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/acty_orders_horizontal_separator" />
+
+        <com.bm.mspt.shop.orders.ViewActyOrdersTabHead
+            android:id="@+id/activity_orders_tabhead2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/acty_orders_horizontal_separator" />
+
+        <com.bm.mspt.shop.orders.ViewActyOrdersTabHead
+            android:id="@+id/activity_orders_tabhead3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/acty_orders_horizontal_separator" />
+
+        <com.bm.mspt.shop.orders.ViewActyOrdersTabHead
+            android:id="@+id/activity_orders_tabhead4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <ListView
+            android:id="@+id/activity_orders_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/activity_orders_confirm_layout" />
+
+        <RelativeLayout
+            android:id="@+id/activity_orders_confirm_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/acty_orders_confirm_background">
+
+
+            <ImageView
+                android:id="@+id/activity_orders_confirm_logo"
+                android:layout_width="@dimen/activity_orders_confirm_logo_side_length"
+                android:layout_height="@dimen/activity_orders_confirm_logo_side_length"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/activity_orders_confirm_logo_margin_left"
+                android:src="@drawable/acty_orders_confirm_logo" />
+
+            <TextView
+                android:id="@+id/activity_orders_confirm_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/activity_orders_confirm_text_margin_left"
+                android:layout_toRightOf="@id/activity_orders_confirm_logo"
+                android:text="@string/empty"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/activity_orders_confirm_btn"
+                android:layout_width="@dimen/activity_orders_confirm_btn_width"
+                android:layout_height="@dimen/activity_orders_confirm_btn_height"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_orders_confirm_btn_margin_right"
+                android:layout_centerVertical="true"
+                android:background="@drawable/acty_orders_confirm_btn_background"
+                android:text="@string/test"
+                android:textColor="@color/activity_orders_confirm_btn_text_color" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,178 @@
+<resources>
+    <string name="app_name">Mspt</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="empty" />
+    <string name="sure">确定</string>
+    <string name="test">xx</string>
+
+    <string name="common_verify_getsuccess">验证码已发送</string>
+    <string name="common_error_phone">请输入正确的手机号</string>
+    <string name="common_error_password">请输入6-12位数字或英文字母组合的密码</string>
+    <string name="common_error_repassword">两次输入密码不一致</string>
+    <string name="common_error_phone_empty">请输入手机号</string>
+    <string name="common_error_password_empty">请输入密码</string>
+    <string name="common_error_verify_empty">请输入验证码</string>
+    <string name="common_rmb">￥</string>
+    <string name="common_list_lv_num_end">人购买</string>
+    <string name="common_second">s</string>
+
+    <string name="acty_my_mall_account_info">客户信息</string>
+    <string name="acty_my_mall_my_order">我的订单</string>
+    <string name="acty_my_mall_my_collection">我的收藏</string>
+    <string name="acty_my_mall_settings">设置</string>
+    <string name="acty_my_mall_phone_num">手机号：</string>
+    <string name="acty_my_mall_score">积分：</string>
+    <string name="acty_my_mall_login">登录</string>
+    <string name="acty_my_mall_my_registered">注册</string>
+    <string name="acty_my_mall_login_show_more">登录可现实更多特权</string>
+    <string name="acty_settings_manage_address">收货地址管理</string>
+    <string name="acty_settings_feedback">意见反馈</string>
+    <string name="acty_settings_about_us">关于我们</string>
+    <string name="acty_settings_my_evaluation">给我评分</string>
+    <string name="acty_settings_check_update">检查更新</string>
+    <string name="acty_settings_servers_hotline">客服热线</string>
+    <string name="acty_settings_quit">退出登录</string>
+    <string name="acty_settings_hotline_phone_num">021-88888888</string>
+    <!-- 登录 -->
+    <string name="login_title">登录</string>
+    <string name="regist_title">注册</string>
+    <string name="login_forget">忘记密码</string>
+    <string name="login_phone_hint">请输入您的手机</string>
+    <string name="login_phone_passwork">请输入您的密码</string>
+    <!-- 注册 -->
+    <string name="regist_phone_hint">请输入您的手机号</string>
+    <string name="regist_phone_password">请输入您的密码</string>
+    <string name="regist_phone_verify">请输入您的验证码</string>
+    <string name="regist_phone_password_again">请再次输入您的密码</string>
+    <string name="regist_dialog_msg_sure">恭喜您注册成功</string>
+    <string name="regist_verify">发送验证码</string>
+    <string name="regist_verify_reget">重新获取</string>
+    <!-- 忘记密码 -->
+    <string name="forget_phone_password_again">请再次输入您的新密码</string>
+    <string name="forget_commit">完成</string>
+    <string name="forget_phone_password">请输入您的新密码</string>
+
+    <string name="agreement_head">我已阅读并接受</string>
+    <string name="agreement_txt">《用户协议》</string>
+    <!-- 商品列表 -->
+    <string name="goods_list_title">商品列表</string>
+    <string name="goods_list_sort_recommend">推荐</string>
+    <string name="goods_list_sort_price">价格</string>
+    <string name="goods_list_sort_sales">销量</string>
+    <string name="goods_list_sort_appraisal">评价</string>
+    <!-- mainActivity -->
+    <string name="index_index">首页</string>
+    <string name="index_my">我的商城</string>
+    <string name="index_shop">购物车</string>
+    <string name="index_buy">求购</string>
+    <string name="index_sell">供货</string>
+
+    <string name="acty_my_mall_title">我的商城</string>
+    <string name="acty_settings_title">设置</string>
+    <string name="acty_account_info_phone_num">手机号：</string>
+    <string name="acty_account_info_score">积分：</string>
+    <string name="acty_account_info_title">账户资料</string>
+    <string name="acty_about_us_title">关于我们</string>
+    <string name="edittextHint_acty_feedback">请输入您的反馈意见，我们将为您提供更好的服务（500字以内）...</string>
+    <string name="acty_feedback_text_btn">提交</string>
+    <string name="acty_feedback_title">意见反馈</string>
+
+    <string name="acty_collection_title">我的收藏</string>
+    <string name="item_collection_pesron_buyed">人购买</string>
+    <string name="acty_wait_evaluation_total">总体评价</string>
+    <string name="acty_wait_evaluation_your_evaluation">请给出你的打分</string>
+    <string name="edittextHint_acty_wait_evaluation">请给出您的评论（限制在50字以内...</string>
+    <string name="acty_wait_evaluation_title">订单评论</string>
+    <string name="acty_wait_evaluation_right_button">保存</string>
+    <string name="acty_orders_search">搜索</string>
+    <string name="acty_orders_wait_pay">待付款</string>
+    <string name="acty_orders_wait_goods">待收货</string>
+    <string name="acty_orders_wait_evaluation">待评价</string>
+    <string name="acty_orders_histroy">历史订单</string>
+
+    <string name="item_activity_orders_num">数量：</string>
+    <string name="acty_orders_money_total_text">总计：</string>
+    <string name="IndexGoodsLoadAll">已全部加载</string>
+    <string name="shopping_car">购物车</string>
+    <string name="acty_shopping_car_text_shopping_car_is_empty">购物车是空的</string>
+    <string name="acty_shopping_car_empty_yes_text_go_shopping">去逛逛吧</string>
+    <string name="item_acty_shopping_car_text_num">数量</string>
+
+    <string name="acty_shopping_car_total_money">总金额：</string>
+    <string name="item_acy_shopping_car_text_less">-</string>
+    <string name="item_acy_shopping_car_text_more">+</string>
+    <string name="acty_feedback_msg_fail">发送失败</string>
+    <string name="acty_feedback_msg_success">发送成功</string>
+    <string name="forget_title">找回密码</string>
+    <string name="sell_goods_type">商品分类</string>
+    <string name="buy_goods_type">商品分类</string>
+    <string name="activity_detail_store">商家：</string>
+    <string name="activity_detail_phone">联系方式：</string>
+    <string name="activity_detail_introducetion">商品简介</string>
+    <string name="activity_detail_keep_head">收藏</string>
+    <string name="activity_detail_assess">商品评价</string>
+    <string name="detail_title">商品详情</string>
+    <string name="toast_not_login">您尚未登陆，请先登录</string>
+    <string name="credit">积分：</string>
+    <string name="cellphone">手机号：</string>
+    <string name="manage_address">收货地址管理</string>
+    <string name="address_acty_add">添加</string>
+    <string name="add_address">添加收货地址</string>
+    <string name="confirm">确定</string>
+    <string name="pay">付款</string>
+    <string name="acty_add_address_person_name">收货人姓名：</string>
+    <string name="acty_add_address_cellphone_num">手机号码   ：</string>
+    <string name="acty_add_address_area">所在区域    ：</string>
+    <string name="acty_add_address_detail">详细地址   ：</string>
+    <string name="toast_add_address_alert">收货地址数量已达到上限（15），不能再添加</string>
+    <string name="cell_phone_num_can_not_be_empty">手机号码未填写</string>
+    <string name="cell_phone_num_format_is_wrong">手机号码格式不对</string>
+    <string name="name_can_not_empty">收货人姓名未填</string>
+    <string name="address_can_not_empty">收货地址未填写</string>
+    <string name="buy_price_all">总价: ￥</string>
+    <string name="buy_count">数量：</string>
+    <string name="buy_count2">数量</string>
+    <string name="buy_buy">确认购买</string>
+    <string name="shop_shop">加入购物车</string>
+    <string name="buy_title">立即购买</string>
+    <string name="shop_title">加入购物车</string>
+    <string name="order_pay">付款</string>
+    <string name="order_price_all">总金额: ￥</string>
+    <string name="order_receiverinfo">收货人信息</string>
+    <string name="order_goodinfo">商品信息</string>
+    <string name="order_billinfo">订单信息</string>
+    <string name="order_billstate">订单状态</string>
+    <string name="order_billid">订单编号</string>
+
+    <string name="adapter_store_money_head">总价：￥</string>
+    <string name="common_yuan">元)</string>
+    <string name="adapter_store_fare_head">(含运费</string>
+    <string name="order_title">提交订单</string>
+
+    <string name="confrm_delete">删除该地址？</string>
+    <string name="edit_address">修改收货地址</string>
+    <string name="success">成功 ！</string>
+    <string name="failure">失败...</string>
+    <string name="select_a_region">请选择区域</string>
+
+    <string name="shopping_car_price_head">总金额：</string>
+    <string name="shopping_car_pay">结算</string>
+    <string name="common_error_network">网络连接失败</string>
+    <string name="favourite_del_error">取消收藏失败，请稍候再试</string>
+    <string name="favourite_add_error">添加收藏失败，请稍候再试</string>
+
+    <string name="address_area_acty_title">选择区域</string>
+    <string name="select_your_area">请选择您所在的区域</string>
+    <string name="feedback_too_little">反馈信息过少</string>
+    <string name="feedback_can_not_empty">请填写反馈信息</string>
+    <string name="feedback_too_much">内容不得超过500字</string>
+    <string name="acty_feedback_input_tip">0/500</string>
+    <string name="evaluation_cannot_be_null">评价信息尚未填写</string>
+    <string name="evaluation_too_little">评价信息太少了，多写点嘛</string>
+    <string name="evaluation_too_much">评价信息太长了</string>
+    <string name="evaluation_commit_success">评价成功</string>
+    <string name="cartadd_error">加入失败</string>
+
+
+</resources>

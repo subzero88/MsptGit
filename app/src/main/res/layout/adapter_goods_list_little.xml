@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/adapter_goods_list_little_height"
+    android:minHeight="@dimen/adapter_goods_list_little_height">
+
+    <ImageView
+        android:id="@+id/adapter_goods_list_little_img"
+        android:layout_width="@dimen/common_list_lv_image_width"
+        android:layout_height="@dimen/common_list_lv_image_height"
+        android:src="@drawable/common_list_little_img"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/adapter_goods_list_little_name_txt"
+        android:text="@string/test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="@dimen/adapter_goods_list_little_txt_name"
+        android:textColor="@color/black_adapter_little_name"
+        android:layout_marginLeft="@dimen/adapter_goods_list_little_txt_margin_left"
+        android:layout_marginTop="@dimen/adapter_goods_list_little_txt_margin_top"
+        android:layout_marginRight="@dimen/adapter_goods_list_little_numend_margin_right"/>
+
+    <TextView
+        android:id="@+id/adapter_goods_list_little_rmb_txt"
+        android:text="@string/common_rmb"
+        android:textSize="@dimen/common_list_item_big_txt_money"
+        android:textColor="@color/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adapter_goods_list_little_name_txt"
+        android:layout_marginTop="@dimen/adapter_goods_list_little_ratingbar_margin_top"
+        android:layout_marginLeft="@dimen/adapter_goods_list_little_txt_margin_left"/>
+
+    <TextView
+        android:id="@+id/adapter_goods_list_little_price_txt"
+        android:text="@string/test"
+        android:textSize="@dimen/common_list_item_big_txt_money"
+        android:textColor="@color/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/adapter_goods_list_little_rmb_txt"
+        android:layout_below="@id/adapter_goods_list_little_name_txt"
+        android:layout_marginTop="@dimen/adapter_goods_list_little_ratingbar_margin_top"/>
+
+    <TextView
+        android:id="@+id/adapter_goods_list_little_fare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/adapter_goods_list_little_price_txt"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/adapter_goods_list_little_numend_margin_right"
+        android:text="@string/test"
+        android:textColor="@color/gray_goods_list_num_end"
+        android:textSize="@dimen/common_list_lv_txt_num_end_txt"/>
+
+    <RatingBar
+        android:id="@+id/adapter_goods_list_ratingbar"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/activity_detail_rating_bar_height"
+        android:progressDrawable="@drawable/common_list_rating_bar"
+        android:layout_below="@id/adapter_goods_list_little_price_txt"
+        android:layout_marginTop="@dimen/adapter_goods_list_little_ratingbar_margin_top"
+        android:layout_marginLeft="@dimen/adapter_goods_list_little_txt_margin_left"
+        android:numStars="5"
+        android:clickable="false"
+        android:isIndicator="true"
+        android:stepSize="1" />
+
+    <TextView
+        android:id="@+id/adapter_goods_list_num_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/common_list_lv_num_end"
+        android:textColor="@color/gray_goods_list_num_end"
+        android:textSize="@dimen/common_list_lv_txt_num_end_txt"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/adapter_goods_list_little_numend_margin_right"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/adapter_goods_list_little_numend_margin_bottom"/>
+
+    <TextView
+        android:id="@+id/adapter_goods_list_num"
+        android:text="@string/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/adapter_goods_list_num_end"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/blue_goods_list_num"
+        android:textSize="@dimen/common_list_lv_txt_num_end_txt"
+        android:paddingBottom="@dimen/adapter_goods_list_little_numend_margin_bottom" />
+
+</RelativeLayout>

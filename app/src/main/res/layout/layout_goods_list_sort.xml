@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/goods_list_sort_height"
+    android:background="@color/white"
+    android:weightSum="4">
+
+    <RadioButton
+        android:id="@+id/goods_list_sort_rb_recommend"
+        style="@style/goods_list_sort_rb"
+        android:text="@string/goods_list_sort_recommend" />
+
+    <View
+        android:layout_width="@dimen/goods_list_sort_part_line_width"
+        android:layout_height="@dimen/goods_list_sort_part_line_height"
+        android:background="@drawable/goods_list_part_line"
+        android:layout_gravity="center_vertical" />
+
+    <RadioButton
+        android:id="@+id/goods_list_sort_rb_price"
+        style="@style/goods_list_sort_rb"
+        android:text="@string/goods_list_sort_price" />
+
+    <View
+        android:layout_width="@dimen/goods_list_sort_part_line_width"
+        android:layout_height="@dimen/goods_list_sort_part_line_height"
+        android:background="@drawable/goods_list_part_line"
+        android:layout_gravity="center_vertical" />
+
+    <RadioButton
+        android:id="@+id/goods_list_sort_rb_sales"
+        style="@style/goods_list_sort_rb"
+        android:text="@string/goods_list_sort_sales" />
+
+    <View
+        android:layout_width="@dimen/goods_list_sort_part_line_width"
+        android:layout_height="@dimen/goods_list_sort_part_line_height"
+        android:background="@drawable/goods_list_part_line"
+        android:layout_gravity="center_vertical" />
+
+    <RadioButton
+        android:id="@+id/goods_list_sort_rb_appraisal"
+        style="@style/goods_list_sort_rb"
+        android:text="@string/goods_list_sort_appraisal" />
+
+</RadioGroup>

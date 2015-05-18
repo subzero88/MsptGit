@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_acty_address_layout_height"
+    android:minHeight="@dimen/item_acty_address_layout_height">
+
+    <TextView
+        android:id="@+id/item_acty_address_textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="11dp"
+        android:text="刘德华156"
+        android:textColor="@color/item_acty_address_text_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/item_acty_address_textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/item_acty_address_textView1"
+        android:layout_below="@id/item_acty_address_textView1"
+        android:layout_marginTop="9dp"
+        android:text="上海 上海市 浦东新区"
+        android:textColor="@color/item_acty_address_text_color" />
+
+    <TextView
+        android:id="@+id/item_acty_address_textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/item_acty_address_textView1"
+        android:layout_below="@id/item_acty_address_textView2"
+        android:layout_marginTop="7dp"
+        android:text="上海市浦东新区陆家嘴99号万象大厦18楼"
+        android:textColor="@color/item_acty_address_text_color" />
+
+    <TextView
+        android:id="@+id/item_acty_address_textView_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/item_acty_address_textView1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/item_acty_address_textView_phone_margin_right"
+        android:text="12345678910"
+        android:textSize="16sp"
+        android:textColor="@color/item_acty_address_text_color" />
+    <Button
+        android:id="@+id/item_acty_address_btn_set"
+        android:layout_width="@dimen/item_acty_address_btn_set_width"
+        android:layout_height="@dimen/item_acty_address_btn_set_height"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/item_acty_address_btn_text_color"
+        android:layout_marginRight="@dimen/item_acty_address_btn_set_margin_right"
+        android:layout_marginTop="@dimen/item_acty_address_btn_set_margin_top"
+        android:background="@drawable/item_acty_address_btn_set"
+        android:text="设为默认" />
+
+    <Button
+        android:id="@+id/item_acty_address_btn_delete"
+        android:layout_width="@dimen/item_acty_address_btn_delete_width"
+        android:layout_height="@dimen/item_acty_address_btn_delete_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/item_acty_address_btn_delete_margin_right"
+        android:layout_marginBottom="@dimen/item_acty_address_btn_delete_margin_bottom"
+        android:background="@drawable/item_acty_address_btn_delete" />
+
+    <Button
+        android:id="@+id/item_acty_address_btn_edit"
+        android:layout_width="@dimen/item_acty_address_btn_edit_width"
+        android:layout_height="@dimen/item_acty_address_btn_edit_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/item_acty_address_btn_edit_margin_right"
+        android:layout_toLeftOf="@id/item_acty_address_btn_delete"
+        android:layout_marginBottom="@dimen/item_acty_address_btn_edit_margin_bottom"
+        android:background="@drawable/item_acty_address_btn_edit" />
+</RelativeLayout>

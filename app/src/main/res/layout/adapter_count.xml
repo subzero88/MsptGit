@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/adapter_count_height">
+
+    <ImageView
+        android:id="@+id/layout_count_img"
+        android:layout_width="@dimen/common_list_lv_image_width"
+        android:layout_height="@dimen/common_list_lv_image_height"
+        android:layout_marginTop="@dimen/adapter_count_img_margin_top"
+        android:layout_marginLeft="@dimen/common_list_lv_padding_left"
+        android:src="@drawable/common_list_little_img" />
+
+    <TextView
+        android:id="@+id/layout_count_txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:text="@string/test"
+        android:textSize="@dimen/activity_buy_txt_name"
+        android:textColor="@color/black_adapter_little_name"
+        android:singleLine="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/activity_buy_txt_count_margin_right"
+        android:layout_toRightOf="@id/layout_count_img"
+        android:layout_marginLeft="@dimen/activity_buy_txt_name_margin_left"
+        android:layout_marginTop="@dimen/adapter_count_txt_name_margin_top" />
+
+    <TextView
+        android:id="@+id/layout_count_txt_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:text="@string/test"
+        android:textSize="@dimen/activity_buy_txt_info"
+        android:textColor="@color/black_adapter_little_name"
+        android:singleLine="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/activity_buy_txt_count_margin_right"
+        android:layout_toRightOf="@id/layout_count_img"
+        android:layout_marginLeft="@dimen/activity_buy_txt_name_margin_left"
+        android:layout_below="@id/layout_count_txt_name"
+        android:layout_marginTop="@dimen/activity_buy_txt_info_margin_top" />
+
+    <TextView
+        android:id="@+id/layout_count_txt_price_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/common_rmb"
+        android:textSize="@dimen/activity_buy_txt_name"
+        android:textColor="@color/red"
+        android:layout_toRightOf="@id/layout_count_img"
+        android:layout_marginLeft="@dimen/activity_buy_txt_name_margin_left"
+        android:layout_below="@id/layout_count_txt_info"
+        android:layout_marginTop="@dimen/activity_buy_txt_price_margin_top" />
+
+    <TextView
+        android:id="@+id/layout_count_txt_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/test"
+        android:textSize="@dimen/activity_buy_txt_name"
+        android:textColor="@color/red"
+        android:layout_alignBottom="@id/layout_count_txt_price_head"
+        android:layout_toRightOf="@id/layout_count_txt_price_head" />
+
+    <TextView
+        android:id="@+id/layout_count_txt_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/activity_buy_txt_count_margin_right"
+        android:textColor="@color/blue_goods_list_num"
+        android:textSize="@dimen/common_list_lv_txt_num_end_txt"
+        android:text="@string/test"
+        android:layout_alignBottom="@id/layout_count_txt_price"/>
+
+    <TextView
+        android:id="@+id/layout_count_count_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buy_count"
+        android:textColor="@color/gray_goods_list_num_end"
+        android:textSize="@dimen/common_list_lv_txt_num_end_txt"
+        android:layout_alignBottom="@id/layout_count_txt_price"
+        android:layout_toLeftOf="@id/layout_count_txt_count"/>
+
+</RelativeLayout>

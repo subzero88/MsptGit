@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="@dimen/adapter_sell_one_height" >
+
+    <TextView
+        android:id="@+id/adapter_sell_one_btn"
+        android:layout_width="@dimen/adapter_sell_one_btn_width"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/adapter_sell_one_btn_height"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="@dimen/adapter_sell_one_txt"
+        android:focusable="false"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+
+</LinearLayout>

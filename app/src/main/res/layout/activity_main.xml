@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/index_rg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_main_bottom_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/index_bottom_bg"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/index_rb_index"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/index_index"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/index_bottom_txt"
+            android:layout_marginTop="@dimen/index_index_margin_top"
+            android:drawableTop="@drawable/index_index_sel"
+            android:textColor="@drawable/index_bottom_txt_sel"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/index_rb_sell"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/index_sell"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/index_index_margin_top"
+            android:textColor="@drawable/index_bottom_txt_sel"
+            android:textSize="@dimen/index_bottom_txt"
+            android:drawableTop="@drawable/index_sell_sel" />
+
+        <RadioButton
+            android:id="@+id/index_rb_buy"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/index_buy"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/index_index_margin_top"
+            android:textColor="@drawable/index_bottom_txt_sel"
+            android:textSize="@dimen/index_bottom_txt"
+            android:drawableTop="@drawable/index_buy_sel" />
+
+        <RadioButton
+            android:id="@+id/index_rb_shop"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/index_shop"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/index_index_margin_top"
+            android:textColor="@drawable/index_bottom_txt_sel"
+            android:textSize="@dimen/index_bottom_txt"
+            android:drawableTop="@drawable/index_shop_sel" />
+
+        <RadioButton
+            android:id="@+id/index_rb_my"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/index_my"
+            android:textSize="@dimen/index_bottom_txt"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/index_index_margin_top"
+            android:textColor="@drawable/index_bottom_txt_sel"
+            android:drawableTop="@drawable/index_my_sel" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/app_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/index_rg"
+        android:layout_alignParentTop="true">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/activity_main_txt_shopnum"
+        android:layout_width="@dimen/index_shop_num_width_height"
+        android:layout_height="@dimen/index_shop_num_width_height"
+        android:text="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/index_shop_num_bg"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/index_shop_num_margin_bottom"
+        android:layout_marginLeft="@dimen/index_shop_num_margin_left" />
+
+</RelativeLayout>

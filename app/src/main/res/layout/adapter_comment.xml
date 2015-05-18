@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/adapter_comment_padding_left"
+    android:paddingRight="@dimen/adapter_comment_padding_left"
+    android:paddingTop="@dimen/adapter_comment_padding_top"
+    android:paddingBottom="@dimen/adapter_comment_padding_bottom">
+
+    <TextView
+        android:id="@+id/adapter_comment_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/test"
+        android:textColor="#272727"
+        android:textSize="@dimen/adapter_comment_name_textsize"/>
+
+    <RatingBar
+        android:id="@+id/adapter_comment_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/activity_detail_rating_bar_height"
+        android:progressDrawable="@drawable/common_list_rating_bar"
+        android:numStars="5"
+        android:clickable="false"
+        android:isIndicator="true"
+        android:stepSize="1"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/adapter_comment_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/test"
+        android:textColor="#424242"
+        android:textSize="@dimen/adapter_comment_info_textsize"
+        android:layout_below="@id/adapter_comment_name"
+        android:layout_marginTop="@dimen/adapter_comment_info_margin_top"/>
+
+    <TextView
+        android:id="@+id/adapter_comment_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/test"
+        android:textColor="#9c9c9c"
+        android:textSize="@dimen/adapter_comment_info_textsize"
+        android:layout_below="@id/adapter_comment_info"
+        android:layout_marginTop="@dimen/adapter_comment_info_margin_top"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

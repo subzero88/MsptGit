@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_normal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_pay_text_layout_height"
+        android:background="@color/acty_pay_text_layout_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/acty_pay_text_layout"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_pay_text_margin_left"
+            android:text="支付方式"
+            android:textSize="@dimen/acty_pay_text_layout" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/acty_pay_layout_ali"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_pay_item_height"
+        android:background="@color/acty_pay_background_ali">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_pay_text_margin_left"
+            android:text="支付宝"
+            android:textColor="@color/white"
+            android:textSize="@dimen/acty_pay_text_item" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/acty_pay_logo_ali_margin_right"
+            android:src="@drawable/acty_pay_logo_ali" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/acty_pay_layout_union"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_pay_item_height"
+        android:background="@color/acty_pay_background_union">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_pay_text_margin_left"
+            android:text="银联支付"
+            android:textColor="@color/white"
+            android:textSize="@dimen/acty_pay_text_item" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/acty_pay_logo_union_margin_right"
+            android:src="@drawable/acty_pay_logo_union" />
+    </RelativeLayout>
+
+</LinearLayout>

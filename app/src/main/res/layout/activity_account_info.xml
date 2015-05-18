@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/acty_my_mall_backgroud"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/head_normal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_account_info_item_height">
+
+        <ImageView
+            android:id="@+id/activity_account_info_logo_phone"
+            android:layout_width="@dimen/acty_account_info_logo_width"
+            android:layout_height="@dimen/acty_account_info_logo_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_account_info_logo_to_left"
+            android:src="@drawable/acty_account_info_logo_phone" />
+
+        <TextView
+            android:id="@+id/activity_account_info_text_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_account_info_between_logo_text"
+            android:layout_toRightOf="@+id/activity_account_info_logo_phone"
+            android:text="@string/acty_account_info_phone_num"
+            android:textColor="@color/acty_account_info_text"
+            android:textSize="@dimen/acty_account_info_text_size" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_account_info_separator_height"
+        android:layout_marginLeft="@dimen/acty_account_info_logo_to_left"
+        android:layout_marginRight="@dimen/acty_account_separator_to_right"
+        android:background="@color/acty_account_info_separator_background" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_account_info_item_height">
+
+        <ImageView
+            android:id="@+id/activity_account_info_logo_score"
+            android:layout_width="@dimen/acty_account_info_logo_width"
+            android:layout_height="@dimen/acty_account_info_logo_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_account_info_logo_to_left"
+            android:src="@drawable/acty_account_info_logo_score" />
+
+        <TextView
+            android:id="@+id/activity_account_info_text_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_account_info_between_logo_text"
+            android:layout_toRightOf="@+id/activity_account_info_logo_score"
+            android:text="@string/acty_account_info_score"
+            android:textColor="@color/acty_account_info_text"
+            android:textSize="@dimen/acty_account_info_text_size" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_account_info_separator_height"
+        android:layout_marginLeft="@dimen/acty_account_info_logo_to_left"
+        android:layout_marginRight="@dimen/acty_account_separator_to_right"
+        android:background="@color/acty_account_info_separator_background" />
+
+
+</LinearLayout>

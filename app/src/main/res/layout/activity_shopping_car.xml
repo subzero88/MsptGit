@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/acty_shopping_car_head"
+        layout="@layout/head_normal" />
+
+    <RelativeLayout
+        android:id="@+id/acty_shopping_car_empty_yes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/acty_shopping_car_head"
+        android:background="@color/white"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/acty_shopping_car_empty_yes_logo"
+            android:layout_width="@dimen/acty_shopping_car_empty_yes_logo_side_length"
+            android:layout_height="@dimen/acty_shopping_car_empty_yes_logo_side_length"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/acty_shopping_car_empty_yes_logo_margin_top"
+            android:src="@drawable/acty_shopping_empty_yes_logo" />
+
+        <TextView
+            android:id="@+id/acty_shopping_car_empty_yes_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/acty_shopping_car_empty_yes_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/acty_shopping_car_empty_yes_text_margin_top"
+            android:text="@string/acty_shopping_car_text_shopping_car_is_empty"
+            android:textColor="@color/acty_shopping_car_empty_yes_text_color"
+            android:textSize="@dimen/acty_shopping_car_empty_yes_text" />
+
+        <Button
+            android:id="@+id/acty_shopping_car_empty_yes_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/acty_shopping_car_empty_yes_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/acty_shopping_car_empty_yes_btn_margin_top"
+            android:background="@drawable/acty_shopping_empty_yes_btn_background"
+            android:text="@string/acty_shopping_car_empty_yes_text_go_shopping"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_shopping_car_bot_height"
+        android:background="@color/gray_shopcar_bottom"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/relativeLayout">
+
+        <ImageView
+            android:id="@+id/acty_shopping_car_empty_not_confirm_logo"
+            android:layout_width="@dimen/activity_orders_confirm_logo_side_length"
+            android:layout_height="@dimen/activity_orders_confirm_logo_side_length"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_orders_confirm_logo_margin_left"
+            android:src="@drawable/adapter_shopcar_btn_sel" />
+
+        <TextView
+            android:id="@+id/activity_shopping_car_price_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_orders_confirm_text_margin_left"
+            android:layout_toRightOf="@id/acty_shopping_car_empty_not_confirm_logo"
+            android:text="@string/shopping_car_price_head"
+            android:textSize="@dimen/shopcar_bottom_txt"
+            android:textColor="@color/gray_shopcar_bottom_txt" />
+
+        <TextView
+            android:id="@+id/activity_shopping_car_rmb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/common_rmb"
+            android:textSize="@dimen/shopcar_bottom_txt"
+            android:textColor="@color/orange"
+            android:layout_toRightOf="@id/activity_shopping_car_price_head"/>
+
+        <TextView
+            android:id="@+id/activity_shopping_car_txt_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/test"
+            android:textSize="@dimen/shopcar_bottom_txt"
+            android:textColor="@color/orange"
+            android:layout_toRightOf="@id/activity_shopping_car_rmb"/>
+
+        <Button
+            android:id="@+id/acty_shopping_car_empty_not_confirm_btn"
+            android:layout_width="@dimen/activity_orders_confirm_btn_width"
+            android:layout_height="@dimen/activity_orders_confirm_btn_height"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/activity_orders_confirm_btn_margin_right"
+            android:layout_centerVertical="true"
+            android:background="@drawable/dialog_btn"
+            android:text="@string/shopping_car_pay"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/activity_shopping_car_fare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test"
+            android:textSize="@dimen/shopcar_bottom_txt"
+            android:textColor="@color/gray_shopcar_bottom_txt"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/activity_shopping_car_txt_price"
+            android:layout_marginLeft="@dimen/shopping_car_fare"/>
+    </RelativeLayout>
+
+
+    <ExpandableListView
+        android:id="@+id/acty_shopping_car_listView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/common_goods_list_lv"
+        android:childDivider="@drawable/common_list_line"
+        android:groupIndicator="@null"
+        android:layout_below="@id/acty_shopping_car_head"
+        android:layout_above="@+id/relativeLayout" />
+</RelativeLayout>

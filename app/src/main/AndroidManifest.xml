@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bm.mspt">
+
+    <application
+        android:name=".MsptApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LoadingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".shop.MyMallActivity" />
+        <activity
+            android:name=".my.SettingsActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".my.AccountInfoActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".my.AboutUsActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".my.FeedbackActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <activity
+            android:name=".shop.waitEvaluation.WaitEvaluationActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <activity
+            android:name=".shop.orders.OrdersActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+
+        <activity android:name=".sell.AddressManagementActivity"/>
+        <activity
+            android:name=".shop.TestActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <activity android:name=".shop.collection.CollectionActivity" />
+        <activity android:name=".sell.AddEditAddressActivity" />
+        <activity android:name=".sell.PayActivity" />
+        <activity android:name=".sell.AddressAreaActivity" />
+
+
+        <activity
+            android:name=".user.LoginActivity"
+            android:label="@string/login_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 注册 -->
+        <activity
+            android:name=".user.RegistActivity"
+            android:label="@string/regist_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 商品列表 -->
+        <activity
+            android:name=".sell.list.GoodsListActivity"
+            android:label="@string/goods_list_title"
+            android:screenOrientation="portrait" />
+        <!-- 忘记密码 -->
+        <activity
+            android:name=".user.ForgetActivity"
+            android:label="@string/forget_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 商品详情 -->
+        <activity
+            android:name=".sell.detail.GoodsDetailActivity"
+            android:label="@string/detail_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 立即购买 -->
+        <activity
+            android:name=".sell.detail.BuyActivity"
+            android:label="@string/buy_title"
+            android:screenOrientation="portrait" />
+        <!-- 加入购物车 -->
+        <activity
+            android:name=".sell.detail.ShopActivity"
+            android:label="@string/shop_title"
+            android:screenOrientation="portrait" />
+        <!-- 购物车(单独界面) -->
+        <activity
+            android:name=".shop.ShopCarActivity"
+            android:label="@string/index_shop"
+            android:screenOrientation="portrait" />
+        <!-- 主界面 -->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!-- 提交订单 -->
+        <activity
+            android:name=".sell.detail.OrderActivity"
+            android:label="@string/order_title"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

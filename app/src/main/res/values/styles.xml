@@ -1,0 +1,85 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.NoTitleBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- 对话框样式 -->
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="head_edt">
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="common_head_txt">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="common_head_left">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingRight">16.7dp</item>
+    </style>
+
+    <style name="login_txt">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- 商品列表排序按钮 -->
+    <style name="goods_list_sort_rb">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@drawable/goods_list_txt_sel</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:drawablePadding">@dimen/goods_list_selected_line_padding</item>
+        <item name="android:paddingLeft">@dimen/goods_list_selected_line_padding_left</item>
+        <item name="android:paddingRight">@dimen/goods_list_selected_line_padding_left</item>
+        <item name="android:drawableBottom">@drawable/goods_list_selected_line_sel</item>
+    </style>
+
+    <!-- 公用商品列表样式-小图 -->
+    <style name="common_goods_list_lv">
+        <item name="android:divider">@drawable/common_list_line</item>
+        <item name="android:dividerHeight">@dimen/common_list_divider_height</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:paddingLeft">@dimen/common_list_lv_padding_left</item>
+        <item name="android:paddingRight">@dimen/common_list_lv_padding_left</item>
+    </style>
+
+    <!-- 公用商品列表样式-大图 -->
+    <style name="common_goods_list_gv">
+        <item name="android:columnCount">2</item>
+        <item name="android:numColumns">2</item>
+        <item name="android:verticalSpacing">@dimen/common_list_gv_vertical_spacing</item>
+        <item name="android:horizontalSpacing">@dimen/common_list_gv_vertical_spacing</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+    </style>
+
+    <!-- ratingbar样式 -->
+    <style name="adapter_goods_ratingbar" parent="android:Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/common_list_rating_bar</item>
+        <item name="android:minHeight">@dimen/common_rating_bar_height</item>
+        <item name="android:maxHeight">@dimen/common_rating_bar_height</item>
+    </style>
+
+    <dimen name="common_list_gv_vertical_spacing">4dp</dimen>
+</resources>

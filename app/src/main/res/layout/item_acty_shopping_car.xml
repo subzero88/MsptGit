@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_acty_shopping_car_layout_minheight"
+    android:minHeight="@dimen/item_acty_shopping_car_layout_minheight"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/item_acty_shopping_car_checkBox"
+        android:layout_width="@dimen/item_activity_orders_checkbox_side_length"
+        android:layout_height="@dimen/item_activity_orders_checkbox_side_length"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/item_acty_shopping_checkbox_margin_left"
+        android:layout_marginTop="@dimen/item_acty_shopping_checkbox_margin_top" />
+
+    <ImageView
+        android:id="@+id/item_acty_shopping_car_logo"
+        android:layout_width="@dimen/item_activity_orders_logo_width"
+        android:layout_height="@dimen/item_activity_orders_logo_height"
+        android:layout_marginLeft="@dimen/item_acty_shopping_logo_margin_left"
+        android:layout_marginTop="@dimen/item_acty_shopping_logo_margin_top"
+        android:background="#ff00ff" />
+
+    <TextView
+        android:id="@+id/item_acty_shopping_car_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/item_acty_shopping_text1_margin_left"
+        android:layout_marginTop="@dimen/item_acty_shopping_text1_margin_top"
+        android:layout_toRightOf="@id/item_acty_shopping_car_logo"
+        android:text="Small Text1"
+        android:textColor="@color/item_acty_shopping_car_text1_color"
+        android:textSize="@dimen/item_acty_shopping_car_text1_size" />
+
+    <TextView
+        android:id="@+id/item_acty_shopping_car_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_acty_shopping_car_text1"
+        android:layout_below="@+id/item_acty_shopping_car_text1"
+        android:layout_marginTop="@dimen/item_acty_shopping_car_text2_margin_top"
+        android:text="Small Text2"
+        android:textColor="@color/item_acty_shopping_car_text2_color" />
+
+
+    <TextView
+        android:id="@+id/item_acty_shopping_car_text_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_acty_shopping_car_text2"
+        android:layout_below="@+id/item_acty_shopping_car_text2"
+        android:layout_marginTop="@dimen/item_acty_shopping_car_text_money_margin_top"
+        android:text="Small Text4"
+        android:textColor="@color/red"
+        android:textSize="@dimen/item_acty_shopping_car_text1_size" />
+
+    <TextView
+        android:id="@+id/item_acty_shopping_car_text_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_acty_shopping_car_logo"
+        android:layout_marginLeft="@dimen/item_acty_shopping_car_text_num_margin_left"
+        android:textColor="@color/item_acty_shopping_car_text2_color"
+        android:layout_marginTop="@dimen/item_acty_shopping_car_text_num_margin_top"
+        android:text="@string/item_acty_shopping_car_text_num" />
+
+    <Button
+        android:id="@+id/item_acty_shopping_car_btn_less"
+        android:layout_width="@dimen/item_acty_shopping_car_btn_width"
+        android:layout_height="@dimen/item_acty_shopping_car_btn_height"
+        android:layout_below="@+id/item_acty_shopping_car_logo"
+        android:layout_marginLeft="@dimen/item_acty_shopping_car_btn_less_margin_left"
+        android:layout_marginTop="@dimen/item_acty_shopping_car_btn_less_margin_top"
+        android:layout_toRightOf="@+id/item_acty_shopping_car_text_num"
+        android:background="@drawable/item_acty_shopping_car_btn_background"
+        android:text="@string/item_acy_shopping_car_text_less"
+        android:textColor="@color/item_acty_shopping_car_btn_text_color" />
+
+    <TextView
+        android:id="@+id/item_acty_shopping_car_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/item_acty_shopping_car_btn_less"
+        android:layout_marginLeft="@dimen/item_acty_shopping_car_count_margin_left"
+        android:layout_toRightOf="@id/item_acty_shopping_car_btn_less"
+        android:background="@drawable/item_acty_shopping_car_text_count_background"
+        android:gravity="center"
+        android:text="@string/empty"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/item_acty_shopping_car_btn_more"
+        android:layout_width="@dimen/item_acty_shopping_car_btn_width"
+        android:layout_height="@dimen/item_acty_shopping_car_btn_height"
+        android:layout_alignTop="@+id/item_acty_shopping_car_btn_less"
+        android:layout_marginLeft="@dimen/item_acty_shopping_car_btn_more_margin_left"
+        android:layout_toRightOf="@+id/item_acty_shopping_car_count"
+        android:background="@drawable/item_acty_shopping_car_btn_background"
+        android:text="@string/item_acy_shopping_car_text_more"
+        android:textColor="@color/item_acty_shopping_car_btn_text_color" />
+
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/sell_head"
+        layout="@layout/head_normal" />
+
+    <ListView
+        android:id="@+id/fragment_sell_lv_one"
+        android:layout_width="@dimen/fragment_sell_listview_width"
+        android:layout_height="match_parent"
+        android:layout_below="@id/sell_head"
+        android:scrollbars="none"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:background="@drawable/common_classification_list_one_bg">
+
+    </ListView>
+
+    <!--
+    <GridView
+        android:id="@+id/fragment_sell_gv_two"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/sell_head"
+        android:layout_toRightOf="@id/fragment_sell_lv_one"
+        android:background="@color/white"
+        android:numColumns="2"
+        android:verticalSpacing="@dimen/fragment_sell_gv_two_vertical_spacing"
+        android:horizontalSpacing="@dimen/fragment_sell_gv_two_horizontal_spacing"
+        android:paddingLeft="@dimen/fragment_sell_gv_two_padding_left"
+        android:paddingRight="@dimen/fragment_sell_gv_two_padding_left"
+        android:paddingTop="@dimen/fragment_sell_gv_two_vertical_spacing"
+        android:scrollbars="none"
+        android:listSelector="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent">
+    </GridView>
+    -->
+    <ListView
+        android:id="@+id/fragment_sell_lv_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sell_head"
+        android:layout_toRightOf="@id/fragment_sell_lv_one"
+        android:background="#eaeaea"
+        android:divider="@null"
+        android:cacheColorHint="@android:color/transparent"
+        android:scrollbars="none"
+        android:listSelector="#e3e3e3" />
+</RelativeLayout>

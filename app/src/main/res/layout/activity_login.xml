@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg">
+
+    <include
+        android:id="@+id/login_head"
+        layout="@layout/head_left_btn" />
+
+    <RelativeLayout
+        android:id="@+id/login_rl_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/login_phone_rl_height"
+        android:layout_below="@id/login_head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/login_phone_margin_left"
+        android:layout_marginRight="@dimen/login_phone_margin_left"
+        android:layout_marginTop="@dimen/login_phone_margin_top"
+        android:background="@drawable/login_edt_bg">
+
+        <com.bm.mspt.view.ClearEditText
+            android:id="@+id/login_edt_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/login_phone_hint"
+            android:padding="3dp"
+            android:inputType="phone"
+            style="@style/login_txt"
+            android:background="@null" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/login_rl_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_phone_rl_height"
+        android:layout_below="@id/login_rl_phone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/login_phone_margin_left"
+        android:layout_marginRight="@dimen/login_phone_margin_left"
+        android:layout_marginTop="@dimen/login_password_margin_top"
+        android:background="@drawable/login_edt_bg">
+
+        <com.bm.mspt.view.ClearEditText
+            android:id="@+id/login_edt_password"
+            style="@style/login_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/login_phone_passwork"
+            android:inputType="textPassword"
+            android:padding="3dp"
+            android:background="@null" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/login_btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_login_height"
+        android:layout_below="@id/login_rl_password"
+        android:layout_marginTop="@dimen/login_login_margin_top"
+        android:layout_marginLeft="@dimen/login_login_margin_left"
+        android:layout_marginRight="@dimen/login_login_margin_left"
+        android:background="@drawable/login_btn_bg"
+        android:text="@string/login_title"
+        android:textSize="@dimen/regist_regist_txt"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/login_txt_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_forget"
+        android:textColor="@color/gray_login_forget"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/login_rl_password"
+        android:layout_marginRight="@dimen/login_phone_margin_left"
+        android:layout_marginTop="@dimen/login_forget_margin_top" />
+
+</RelativeLayout>

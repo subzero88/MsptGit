@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_item_wait_evaluation">
+
+    <TextView
+        android:id="@+id/item_activity_wait_evaluation_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/item_wait_evaluation_name_textsize" />
+
+    <RatingBar
+        android:id="@+id/item_activity_wait_evaluation_ratingbar"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/common_rating_bar_height"
+        android:progressDrawable="@drawable/common_list_rating_bar"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/item_activity_wait_evaluation_name"
+        android:isIndicator="true" />
+
+    <TextView
+        android:id="@+id/item_activity_wait_evaluation_evaluation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/item_activity_wait_evaluation_date"
+        android:layout_alignLeft="@+id/item_activity_wait_evaluation_name"
+        android:layout_alignRight="@+id/item_activity_wait_evaluation_date"
+        android:layout_below="@+id/item_activity_wait_evaluation_name"
+        android:layout_marginTop="20dp"
+        android:text="Smalfdsafedsafewa"
+        android:textColor="@color/black"
+        android:textSize="@dimen/item_wait_evaluation_evaluation_textsize" />
+
+    <TextView
+        android:id="@+id/item_activity_wait_evaluation_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/item_activity_wait_evaluation_evaluation"
+        android:text="2014-2-5"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/item_wait_evaluation_date" />
+
+</RelativeLayout>

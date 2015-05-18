@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_normal" />
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/acty_feedback_edittext_background_width"
+        android:layout_height="@dimen/acty_feedback_edittext_background_height"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/acty_feedback_edittext_margin_top"
+        android:padding="@dimen/acty_feedback_edittext_padding">
+
+        <EditText
+            android:id="@+id/activity_feedback_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="@string/edittextHint_acty_feedback" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/activity_feedback_input_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/activity_feedback_input_length_margin_eight"
+        android:text="@string/acty_feedback_input_tip"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/activity_feedback_btn"
+        android:layout_width="@dimen/activity_feedback_btn_width"
+        android:layout_height="@dimen/activity_feedback_btn_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/acty_feedback_btn_margin_top"
+        android:background="@drawable/login_btn_bg"
+        android:text="@string/acty_feedback_text_btn"
+        android:textColor="@color/white"
+        android:textSize="@dimen/acty_feedback_btn_textsize" />
+
+</LinearLayout>

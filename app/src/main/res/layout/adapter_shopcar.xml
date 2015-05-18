@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/bottom_wrapper"
+        android:background="@color/orange"
+        android:layout_width="@dimen/common_list_del_width"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="@dimen/adapter_shopcar_btn_del_width"
+            android:layout_height="@dimen/adapter_shopcar_btn_del_height"
+            android:contentDescription="@string/empty"
+            android:src="@drawable/common_list_del_btn"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/adapter_shopcar_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/adapter_count_height">
+
+            <Button
+                android:id="@+id/adapter_shopcar_btn"
+                android:layout_width="@dimen/adapter_shopcar_btn_width"
+                android:layout_height="@dimen/adapter_shopcar_btn_width"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/adapter_shopcar_btn_margin_left"
+                android:layout_marginRight="@dimen/adapter_shopcar_btn_margin_left"
+                android:background="@drawable/adapter_shopcar_btn_sel" />
+
+            <ImageView
+                android:id="@+id/adapter_shopcar_img"
+                android:layout_width="@dimen/common_list_lv_image_width"
+                android:layout_height="@dimen/common_list_lv_image_height"
+                android:layout_marginTop="@dimen/adapter_count_img_margin_top"
+                android:layout_toRightOf="@id/adapter_shopcar_btn"
+                android:layout_marginLeft="@dimen/common_list_lv_padding_left"
+                android:src="@drawable/common_list_little_img" />
+
+            <TextView
+                android:id="@+id/adapter_shopcar_txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="@string/test"
+                android:textSize="@dimen/activity_buy_txt_name"
+                android:textColor="@color/black_adapter_little_name"
+                android:singleLine="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_buy_txt_count_margin_right"
+                android:layout_toRightOf="@id/adapter_shopcar_img"
+                android:layout_marginLeft="@dimen/activity_buy_txt_name_margin_left"
+                android:layout_marginTop="@dimen/adapter_count_txt_name_margin_top" />
+
+            <TextView
+                android:id="@+id/adapter_shopcar_txt_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="@string/test"
+                android:textSize="@dimen/activity_buy_txt_info"
+                android:textColor="@color/black_adapter_little_name"
+                android:singleLine="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_buy_txt_count_margin_right"
+                android:layout_toRightOf="@id/adapter_shopcar_img"
+                android:layout_marginLeft="@dimen/activity_buy_txt_name_margin_left"
+                android:layout_below="@id/adapter_shopcar_txt_name"
+                android:layout_marginTop="@dimen/activity_buy_txt_info_margin_top" />
+
+            <TextView
+                android:id="@+id/adapter_shopcar_txt_price_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/common_rmb"
+                android:textSize="@dimen/activity_buy_txt_info"
+                android:textColor="@color/red"
+                android:layout_toRightOf="@id/adapter_shopcar_img"
+                android:layout_marginLeft="@dimen/activity_buy_txt_name_margin_left"
+                android:layout_below="@id/adapter_shopcar_txt_info"
+                android:layout_marginTop="@dimen/activity_buy_txt_price_margin_top" />
+
+            <TextView
+                android:id="@+id/adapter_shopcar_txt_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/test"
+                android:textSize="@dimen/activity_buy_txt_name"
+                android:textColor="@color/red"
+                android:singleLine="true"
+                android:layout_alignBottom="@id/adapter_shopcar_txt_price_head"
+                android:layout_toRightOf="@id/adapter_shopcar_txt_price_head" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/adapter_shopcar_count_height">
+
+            <TextView
+                android:id="@+id/adapter_shopcar_txt_count_head2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/activity_buy_img_del_height"
+                android:text="@string/buy_count2"
+                android:textSize="@dimen/activity_buy_txt_info"
+                android:textColor="@color/black_adapter_little_name"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/adapter_shopcar_count_head2_margin_left" />
+
+            <ImageView
+                android:id="@+id/adapter_shopcar_img_del"
+                android:layout_width="@dimen/activity_buy_img_del_width"
+                android:layout_height="@dimen/activity_buy_img_del_height"
+                android:src="@drawable/buy_img_del"
+                android:layout_toRightOf="@id/adapter_shopcar_txt_count_head2"
+                android:layout_marginLeft="@dimen/activity_buy_img_add_margin_left" />
+
+            <TextView
+                android:id="@+id/adapter_shopcar_txt_count2"
+                android:layout_width="@dimen/activity_buy_img_del_height"
+                android:layout_height="@dimen/activity_buy_img_del_height"
+                android:layout_toRightOf="@id/adapter_shopcar_img_del"
+                android:layout_marginLeft="@dimen/activity_buy_txt_count2_margin_left"
+                android:gravity="center"
+                android:textColor="@color/orange" />
+
+            <ImageView
+                android:id="@+id/adapter_shopcar_img_add"
+                android:layout_width="@dimen/activity_buy_img_del_width"
+                android:layout_height="@dimen/activity_buy_img_del_height"
+                android:src="@drawable/buy_img_add"
+                android:layout_toRightOf="@id/adapter_shopcar_txt_count2"
+                android:layout_marginLeft="@dimen/activity_buy_txt_count2_margin_left" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</com.daimajia.swipe.SwipeLayout>

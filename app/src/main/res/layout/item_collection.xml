@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_collection_layout_minheight"
+    android:minHeight="@dimen/item_collection_layout_minheight">
+
+    <ImageView
+        android:id="@+id/item_collection_Logo"
+        android:layout_width="@dimen/item_collection_logo_width"
+        android:layout_height="@dimen/item_collection_logo_height"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/item_collection_logo_to_left"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/item_collectiont_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignTop="@+id/item_collection_Logo"
+        android:layout_marginLeft="@dimen/item_collection_text1_margin_left"
+        android:layout_marginTop="@dimen/item_collection_text1_margin_top"
+        android:text="@string/empty"
+        android:textColor="@color/item_collection_text1"
+        android:textSize="@dimen/item_collection_text1size" />
+
+    <TextView
+        android:id="@+id/item_collectiont_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_collectiont_text1"
+        android:layout_below="@+id/item_collectiont_text1"
+        android:layout_marginTop="@dimen/item_collection_text2_margin_top"
+        android:text="@string/empty"
+        android:textColor="@color/item_collection_text2"
+        android:textSize="@dimen/item_collection_text2size" />
+
+    <RatingBar
+        android:id="@+id/item_collection_ratingbar"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/common_rating_bar_height"
+        android:layout_alignLeft="@+id/item_collectiont_text1"
+        android:layout_below="@+id/item_collectiont_text2"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:progressDrawable="@drawable/common_list_rating_bar" />
+
+    <TextView
+        android:id="@+id/item_collection_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/item_collectiont_text1"
+        android:layout_marginRight="@dimen/item_collection_money_to_right"
+        android:text="@string/empty"
+        android:textColor="@color/item_collection_money_color" />
+
+    <TextView
+        android:id="@+id/item_collection_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/item_collection_ratingbar"
+        android:layout_toRightOf="@id/item_collection_ratingbar"
+        android:layout_alignBottom="@id/item_collection_ratingbar"
+        android:gravity="center"
+        android:text="4.1"
+        android:textColor="@color/item_collection_rating"
+        android:textSize="@dimen/item_collection_textSizeBottom" />
+
+    <TextView
+        android:id="@+id/item_collection_people_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/item_collection_money"
+        android:layout_alignTop="@+id/item_collection_ratingbar"
+        android:text="@string/item_collection_pesron_buyed"
+        android:textColor="@color/item_collection_textview1"
+        android:textSize="@dimen/item_collection_textSizeBottom" />
+
+    <TextView
+        android:id="@+id/item_collection_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/item_collection_ratingbar"
+        android:layout_toLeftOf="@+id/item_collection_people_buy"
+        android:text="599"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/item_collection_count_person"
+        android:textSize="@dimen/item_collection_textSizeBottom" />
+
+
+</RelativeLayout>

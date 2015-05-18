@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_left_btn" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_add_address_item_layout_height">
+
+        <ImageView
+            android:layout_width="@dimen/acty_add_address_logo_person_width"
+            android:layout_height="@dimen/acty_add_address_logo_person_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_add_address_logo1_margin_left"
+            android:src="@drawable/acty_add_address_logo_person" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_add_address_text_margin_left"
+            android:text="@string/acty_add_address_person_name"
+            android:textColor="@color/acty_add_address_person_name"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/acty_add_address_edittext_margin_left"
+            android:lines="1"
+            android:background="@null"
+            android:id="@+id/acty_add_add_editText_name"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_add_address_item_separator_height"
+        android:background="@color/aty_add_address_item_separator" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_add_address_item_layout_height">
+
+        <ImageView
+            android:layout_width="@dimen/acty_add_address_logo_cellphone_width"
+            android:layout_height="@dimen/acty_add_address_logo_cellphone_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_add_address_logo2_margin_left"
+            android:src="@drawable/acty_add_address_logo_cellphone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_add_address_text_margin_left"
+            android:text="@string/acty_add_address_cellphone_num"
+            android:textColor="@color/acty_add_address_text_color"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numeric="integer"
+            android:layout_marginLeft="@dimen/acty_add_address_edittext_margin_left"
+            android:background="@null"
+            android:lines="1"
+            android:id="@+id/acty_add_add_editText_phone"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_add_address_item_separator_height"
+        android:background="@color/aty_add_address_item_separator" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/acty_add_add_layout_region"
+        android:layout_height="@dimen/acty_add_address_item_layout_height">
+
+        <ImageView
+            android:layout_width="@dimen/acty_add_address_logo_area_width"
+            android:layout_height="@dimen/acty_add_address_logo_area_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_add_address_logo1_margin_left"
+            android:src="@drawable/acty_add_address_logo_area" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_add_address_text_margin_left"
+            android:text="@string/acty_add_address_area"
+            android:textColor="@color/acty_add_address_text_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/acty_add_address_textview_area"
+            android:text="——请选中——"
+            android:textColor="@color/red"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_add_address_item_separator_height"
+        android:background="@color/aty_add_address_item_separator" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_add_address_item_layout_height">
+
+        <ImageView
+            android:layout_width="@dimen/acty_add_address_logo_detail_width"
+            android:layout_height="@dimen/acty_add_address_logo_detail_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_add_address_logo2_margin_left"
+            android:src="@drawable/acty_add_address_logo_detail" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_add_address_text_margin_left"
+            android:text="@string/acty_add_address_detail"
+            android:textColor="@color/acty_add_address_text_color"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/acty_add_address_edittext_margin_left"
+            android:background="@null"
+            android:id="@+id/acty_add_add_editText_address"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_add_address_item_separator_height"
+        android:background="@color/aty_add_address_item_separator" />
+</LinearLayout>

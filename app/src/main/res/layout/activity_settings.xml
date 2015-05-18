@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/acty_settings_backgroud"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_normal" />
+
+    <RelativeLayout
+        android:id="@+id/acty_settings_manage_address"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_settings_item_height">
+
+        <ImageView
+            android:id="@+id/imageViewManageAddress"
+            android:layout_width="@dimen/acty_settings_logo_width"
+            android:layout_height="@dimen/acty_settings_logo_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_setting_logo_to_left"
+            android:src="@drawable/acty_setting_manage_address" />
+
+        <TextView
+            android:id="@+id/textViewManageAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_settings_between_logo_text"
+            android:layout_toRightOf="@+id/imageViewManageAddress"
+            android:text="@string/acty_settings_manage_address"
+            android:textColor="@color/acty_settings_text"
+            android:textSize="@dimen/acty_settings_text" />
+
+        <ImageView
+            android:layout_width="@dimen/acty_settings_goto_width"
+            android:layout_height="@dimen/acty_settings_goto_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/acty_settings_goto_to_right"
+            android:src="@drawable/acty_settings_goto" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/acty_settings_separator_to_right"
+        android:src="@drawable/acty_settings_separator" />
+
+    <RelativeLayout
+        android:id="@+id/acty_settings_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_settings_item_height">
+
+        <ImageView
+            android:id="@+id/imageViewfeedback"
+            android:layout_width="@dimen/acty_settings_logo_width"
+            android:layout_height="@dimen/acty_settings_logo_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_setting_logo_to_left"
+            android:src="@drawable/acty_settings_feedback" />
+
+        <TextView
+            android:id="@+id/textViewfeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_settings_between_logo_text"
+            android:layout_toRightOf="@+id/imageViewfeedback"
+            android:text="@string/acty_settings_feedback"
+            android:textColor="@color/acty_settings_text"
+            android:textSize="@dimen/acty_settings_text" />
+
+        <ImageView
+            android:layout_width="@dimen/acty_settings_goto_width"
+            android:layout_height="@dimen/acty_settings_goto_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/acty_settings_goto_to_right"
+            android:src="@drawable/acty_settings_goto" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/acty_settings_separator_to_right"
+        android:src="@drawable/acty_settings_separator" />
+
+    <RelativeLayout
+        android:id="@+id/acty_settings_about_us"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_settings_item_height">
+
+        <ImageView
+            android:id="@+id/imageViewabout_us"
+            android:layout_width="@dimen/acty_settings_logo_width"
+            android:layout_height="@dimen/acty_settings_logo_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_setting_logo_to_left"
+            android:src="@drawable/acty_settings_about_us" />
+
+        <TextView
+            android:id="@+id/textViewabout_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_settings_between_logo_text"
+            android:layout_toRightOf="@+id/imageViewabout_us"
+            android:text="@string/acty_settings_about_us"
+            android:textColor="@color/acty_settings_text"
+            android:textSize="@dimen/acty_settings_text" />
+
+        <ImageView
+            android:layout_width="@dimen/acty_settings_goto_width"
+            android:layout_height="@dimen/acty_settings_goto_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/acty_settings_goto_to_right"
+            android:src="@drawable/acty_settings_goto" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/acty_settings_separator_to_right"
+        android:src="@drawable/acty_settings_separator" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_settings_separator_height"
+        android:background="@color/acty_settings_separator">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/acty_settings_check_update"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_settings_item_height">
+
+        <ImageView
+            android:id="@+id/imageViewcheck_update"
+            android:layout_width="@dimen/acty_settings_logo_width"
+            android:layout_height="@dimen/acty_settings_logo_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_setting_logo_to_left"
+            android:src="@drawable/acty_settings_check_update" />
+
+        <TextView
+            android:id="@+id/textViewcheck_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_settings_between_logo_text"
+            android:layout_toRightOf="@+id/imageViewcheck_update"
+            android:text="@string/acty_settings_check_update"
+            android:textColor="@color/acty_settings_text"
+            android:textSize="@dimen/acty_settings_text" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/acty_settings_separator_to_right"
+        android:src="@drawable/acty_settings_separator" />
+
+    <RelativeLayout
+        android:id="@+id/acty_settings_servers_hotline"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_settings_item_height">
+
+        <ImageView
+            android:id="@+id/imageViewservers_hotline"
+            android:layout_width="@dimen/acty_settings_logo_width"
+            android:layout_height="@dimen/acty_settings_logo_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_setting_logo_to_left"
+            android:src="@drawable/acty_settings_servers_hotline" />
+
+        <TextView
+            android:id="@+id/textViewservers_hotline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_settings_between_logo_text"
+            android:layout_toRightOf="@+id/imageViewservers_hotline"
+            android:text="@string/acty_settings_servers_hotline"
+            android:textColor="@color/acty_settings_text"
+            android:textSize="@dimen/acty_settings_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/acty_setting_hotline_phone_num_to_right"
+            android:text="@string/acty_settings_hotline_phone_num"
+            android:textColor="@color/acty_settings_honline_phone_num"
+            android:textSize="@dimen/acty_settings_text" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/acty_settings_separator_to_right"
+        android:src="@drawable/acty_settings_separator" />
+
+    <RelativeLayout
+        android:id="@+id/acty_settings_quit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acty_settings_item_height">
+
+        <ImageView
+            android:id="@+id/imageViewquit"
+            android:layout_width="@dimen/acty_settings_logo_width"
+            android:layout_height="@dimen/acty_settings_logo_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_setting_logo_to_left"
+            android:src="@drawable/acty_settings_quit" />
+
+        <TextView
+            android:id="@+id/textViewquit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/acty_settings_between_logo_text"
+            android:layout_toRightOf="@+id/imageViewquit"
+            android:text="@string/acty_settings_quit"
+            android:textColor="@color/acty_settings_text"
+            android:textSize="@dimen/acty_settings_text" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/acty_settings_separator_to_right"
+        android:src="@drawable/acty_settings_separator" />
+</LinearLayout>

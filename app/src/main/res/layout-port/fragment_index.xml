@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/index_head"
+        layout="@layout/head_search" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_index_banner_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/index_banners_height"
+        android:layout_below="@id/index_head">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/fragment_index_banner_vp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/index_banners_height" />
+
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/fragment_index_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:radius="@dimen/indicator_corner_radius"
+            app:fillColor="@color/orange"
+            app:pageColor="@color/gray_index_indicator"
+            app:strokeColor="@android:color/transparent"
+            android:padding="@dimen/index_banners_indication_padding"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/index_banners_indicatior_margin_right"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/fragment_index_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_index_banner_rl"
+        style="@style/common_goods_list_lv">
+
+    </ListView>
+
+</RelativeLayout>

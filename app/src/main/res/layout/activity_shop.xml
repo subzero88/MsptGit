@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/shop_head"
+        layout="@layout/head_normal" />
+
+    <include
+        android:layout_below="@id/shop_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_count" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_buy_bottom_height"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="@dimen/activity_buy_bottom_padding_left"
+        android:paddingRight="@dimen/activity_buy_bottom_padding_left"
+        android:background="@color/orange">
+
+        <TextView
+            android:id="@+id/activity_order_txt_price_head2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buy_price_all"
+            android:textColor="@color/white"
+            android:textSize="@dimen/activity_buy_txt_bottom"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/activity_shop_txt_price2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/test"
+            android:textColor="@color/white"
+            android:textSize="@dimen/activity_buy_txt_bottom"
+            android:layout_toRightOf="@id/activity_order_txt_price_head2" />
+
+        <Button
+            android:id="@+id/activity_shop_btn_shop"
+            android:layout_width="@dimen/activity_shop_btn_shop_width"
+            android:layout_height="@dimen/activity_buy_btn_buy_height"
+            android:background="@drawable/buy_btn_buy"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/orange"
+            android:text="@string/shop_shop" />
+
+    </RelativeLayout>
+</RelativeLayout>
