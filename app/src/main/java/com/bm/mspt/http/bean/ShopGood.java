@@ -14,6 +14,15 @@ public class ShopGood implements Serializable {
     private String image_default; // 图片
     private String is_shelf; //
     private String stock; // 库存
+    private boolean isSelected = false; // 选中状态(非返回值)
+
+    public boolean isSelected() {
+        return isSelected;
+    }
+
+    public void setIsSelected(boolean isSelected) {
+        this.isSelected = isSelected;
+    }
 
     public String getCart_id() {
         return cart_id;
@@ -33,6 +42,35 @@ public class ShopGood implements Serializable {
 
     public String getPrice() {
         return price;
+    }
+
+    /**
+     * -数量
+     */
+    public void delCount() {
+        int count = Integer.parseInt(quantity);
+        if (count > 1) {
+            count--;
+        }
+        quantity = String.valueOf(count);
+    }
+
+    /**
+     * ＋数量
+     */
+    public void addCount() {
+        int count = Integer.parseInt(quantity);
+        count++;
+        quantity = String.valueOf(count);
+    }
+
+    /**
+     * 价格float
+     */
+    public float getPriceAll() {
+        float priceValue = Float.parseFloat(price);
+        int count = Integer.parseInt(quantity);
+        return priceValue * count;
     }
 
     public void setPrice(String price) {

@@ -30,8 +30,7 @@ public class ShopcarShowData implements ShowData<ShopBean> {
         if (shopBean.isSuccess()) {
             List<ShopCar> list = shopBean.getData().getList();
             adapter.setList(list);
-            ((TextView)view.findViewById(R.id.activity_shopping_car_fare)).setText("(含运费"+shopBean.getData().getFreight()+")");
-            ((TextView)view.findViewById(R.id.activity_shopping_car_txt_price)).setText(shopBean.getData().getPriceAll());
+//            ((TextView)view.findViewById(R.id.activity_shopping_car_fare)).setText("(含运费"+shopBean.getData().getFreight()+")");
         } else {
 
         }

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 import com.bm.base.BaseFragment;
 import com.bm.mspt.AppKey;
@@ -17,6 +18,7 @@ import com.bm.mspt.http.bean.GoodsBean;
 import com.bm.mspt.http.bean.LoginBean;
 import com.bm.mspt.http.show.GoodsIndexShowData;
 import com.bm.mspt.sell.detail.GoodsDetailActivity;
+import com.bm.mspt.sell.list.SearchSellListActivity;
 import com.bm.mspt.user.LoginActivity;
 import com.bm.mspt.util.InterfaceUtil;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -35,6 +37,7 @@ public class IndexFragment extends BaseFragment implements InterfaceUtil.OnLoadM
     private CirclePageIndicator indicator; // 选择器
     private ListView listView; // 首页商品列表
     private IndexGoodsAdapter adapter; // 首页商品适配器
+    private RelativeLayout layoutSearch; // 搜索
 
     private List<ImageView> banners = new ArrayList<>(); // 广告图片
 
@@ -53,6 +56,7 @@ public class IndexFragment extends BaseFragment implements InterfaceUtil.OnLoadM
         listView = (ListView) rootView.findViewById(R.id.fragment_index_lv);
         adapter = new IndexGoodsAdapter(getActivity(), this);
         listView.setAdapter(adapter);
+        layoutSearch = (RelativeLayout) rootView.findViewById(R.id.rl_search);
         initListener();
         getBanners();
     }
@@ -62,6 +66,7 @@ public class IndexFragment extends BaseFragment implements InterfaceUtil.OnLoadM
      */
     private void initListener() {
         listenListView();
+        listenSearch();
     }
 
     /**
@@ -72,6 +77,20 @@ public class IndexFragment extends BaseFragment implements InterfaceUtil.OnLoadM
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 gotoDetail(i);
+            }
+        });
+    }
+
+    /**
+     * 监听搜索
+     */
+    private void listenSearch() {
+        layoutSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), SearchSellListActivity.class);
+                intent.putExtra(AppKey.INTENT_KEY_GOODSLIST_TYPE_ID, "1");
+                startActivity(intent);
             }
         });
     }

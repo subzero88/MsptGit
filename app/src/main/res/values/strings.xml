@@ -177,6 +177,7 @@
     <string name="activity_buy_detail_store">商家</string>
     <string name="activity_buy_detail_buyman">买家姓名</string>
     <string name="buy_detail">求购商品详情</string>
+    <string name="shopping_car_no_fare">(不含运费)</string>
 
 
 </resources>

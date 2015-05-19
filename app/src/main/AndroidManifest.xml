@@ -115,6 +115,16 @@
             android:name=".buy.detail.BuyDetailActivity"
             android:label="@string/buy_detail"
             android:screenOrientation="portrait" />
+        <!-- 搜索供货列表 -->
+        <activity
+            android:name=".sell.list.SearchSellListActivity"
+            android:label="@string/buy_title"
+            android:screenOrientation="portrait" />
+        <!-- 搜索求购列表 -->
+        <activity
+            android:name=".buy.list.SearchBuyListActivity"
+            android:label="@string/index_sell"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

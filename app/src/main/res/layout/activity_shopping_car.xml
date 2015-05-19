@@ -55,14 +55,14 @@
         android:layout_alignParentBottom="true"
         android:id="@+id/relativeLayout">
 
-        <ImageView
+        <Button
             android:id="@+id/acty_shopping_car_empty_not_confirm_logo"
             android:layout_width="@dimen/activity_orders_confirm_logo_side_length"
             android:layout_height="@dimen/activity_orders_confirm_logo_side_length"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/activity_orders_confirm_logo_margin_left"
-            android:src="@drawable/adapter_shopcar_btn_sel" />
+            android:background="@drawable/adapter_shopcar_btn_sel" />
 
         <TextView
             android:id="@+id/activity_shopping_car_price_head"
@@ -110,7 +110,7 @@
             android:id="@+id/activity_shopping_car_fare"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/test"
+            android:text="@string/shopping_car_no_fare"
             android:textSize="@dimen/shopcar_bottom_txt"
             android:textColor="@color/gray_shopcar_bottom_txt"
             android:layout_centerVertical="true"

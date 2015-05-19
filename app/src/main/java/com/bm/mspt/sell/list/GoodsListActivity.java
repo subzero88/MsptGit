@@ -112,6 +112,14 @@ public class GoodsListActivity extends BaseFragmentActivity {
                 }
             }
         });
+        findViewById(R.id.rl_search).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(instance, SearchSellListActivity.class);
+                intent.putExtra(AppKey.INTENT_KEY_GOODSLIST_TYPE_ID, categoryId);
+                startActivity(intent);
+            }
+        });
     }
 
     /**

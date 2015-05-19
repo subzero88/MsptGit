@@ -14,6 +14,7 @@ import com.bm.mspt.http.bean.AddEditAddressBean;
 import com.bm.mspt.http.bean.AddressBean;
 import com.bm.mspt.http.bean.AdvertBean;
 import com.bm.mspt.http.bean.AreaBean;
+import com.bm.mspt.http.bean.BuyDetailBean;
 import com.bm.mspt.http.bean.BuyGoodsBean;
 import com.bm.mspt.http.bean.CartAddBean;
 import com.bm.mspt.http.bean.CollectionBean;
@@ -218,25 +219,6 @@ public class HttpService {
     }
 
     /**
-     * 商品分类列表
-     */
-    public void goodsTypeListBuy(Activity activity, ShowData<GoodsTypeBean> showData, ErrorCallBack callBack) {
-        Dialog dialog = new ProgressDialog(activity);
-
-        BaseRequest.Holder<GoodsTypeBean> holder = new BaseRequest.Holder<>();
-        holder.setUrl(HOST)
-                .setActivity(activity)
-                .setParam(APP_KEY, APP_VALUE_GOODS)
-                .setParam(SIGN_KEY, createSign(APP_VALUE_USER, "GetCategory"))
-                .setParam(CLASS_KEY, "GetCategory")
-                .setErrorCallBack(callBack)
-                .setDialog(dialog)
-                .setShowData(showData);
-        dialog.show();
-        HttpConnect.getInstance().add(new GsonRequest(holder, GoodsTypeBean.class));
-    }
-
-    /**
      * 首页商品列表
      *
      * @param page:要加载的页数
@@ -355,6 +337,29 @@ public class HttpService {
     }
 
     /**
+     * 求购商品详情
+     *
+     * @param contentId:商品id
+     * @param userid:用户id
+     */
+    public void buyDetail(Activity activity, ShowData<BuyDetailBean> showData, String contentId, String userid) {
+        Dialog dialog = new ProgressDialog(activity);
+
+        BaseRequest.Holder<BuyDetailBean> holder = new BaseRequest.Holder<>();
+        holder.setUrl(HOST)
+                .setActivity(activity)
+                .setParam(APP_KEY, "Buy")
+                .setParam(SIGN_KEY, createSign("Buy", "Detail"))
+                .setParam(CLASS_KEY, "Detail")
+                .setParam("content_id", contentId)
+                .setParam("userid", userid)
+                .setDialog(dialog)
+                .setShowData(showData);
+        dialog.show();
+        HttpConnect.getInstance().add(new GsonRequest(holder, BuyDetailBean.class));
+    }
+
+    /**
      * 加入、取消收藏商品
      * @param contentId:商品id
      * @param userid:用户id
@@ -443,111 +448,111 @@ public class HttpService {
                 .setDialog(dialog)
                 .setShowData(showData);
         dialog.show();
-        String json = "{\n" +
-                "  status : 0,\n" +
-                "  msg : \"\",\n" +
-                "  data : \n" +
-                "  {\n" +
-                "    list : \n" +
-                "    [\n" +
-                "      {\n" +
-                "        store_name : \"简单的店铺\",\n" +
-                "        freight : \"45.000\",\n" +
-                "        carts : \n" +
-                "        [\n" +
-                "          {\n" +
-                "            cart_id : \"8\",\n" +
-                "            quantity : \"4\",\n" +
-                "            price : \"31.00\",\n" +
-                "            name : \"888888VD刻录白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代 WIFI WIN8）白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时\",\n" +
-                "            image_default : \"/4c/b7/45/f7/cc/aa5f62b9617677a24ce7f4.png\",\n" +
-                "            is_shelf : \"1\",\n" +
-                "            stock : \"0\"\n" +
-                "          },\n" +
-                "          {\n" +
-                "            cart_id : \"9\",\n" +
-                "            quantity : \"3\",\n" +
-                "            price : \"1.00\",\n" +
-                "            name : \"77777\",\n" +
-                "            image_default : null,\n" +
-                "            is_shelf : \"1\",\n" +
-                "            stock : \"0\"\n" +
-                "          },\n" +
-                "          {\n" +
-                "            cart_id : \"10\",\n" +
-                "            quantity : \"18\",\n" +
-                "            price : \"111.00\",\n" +
-                "            name : \"111\",\n" +
-                "            image_default : \"/b0/bc/c8/20/54/29da9549a739c51dd695e0.jpg\",\n" +
-                "            is_shelf : \"1\",\n" +
-                "            stock : \"11\"\n" +
-                "          }\n" +
-                "        ],\n" +
-                "        sum_amount : 2125,\n" +
-                "        sum_quantity : 25\n" +
-                "      },\n" +
-                "      {\n" +
-                "        store_name : \"Test_001店铺\",\n" +
-                "        freight : \"50.000\",\n" +
-                "        carts : \n" +
-                "        [\n" +
-                "          {\n" +
-                "            cart_id : \"6\",\n" +
-                "            quantity : \"1\",\n" +
-                "            price : \"5599.00\",\n" +
-                "            name : \"联想（Lenovo）2000\",\n" +
-                "            image_default : \"/d3/1e/00/a3/37/6c8d49d000b09b1bd0a14c.jpeg\",\n" +
-                "            is_shelf : \"1\",\n" +
-                "            stock : \"100\"\n" +
-                "          },\n" +
-                "          {\n" +
-                "            cart_id : \"5\",\n" +
-                "            quantity : \"2\",\n" +
-                "            price : \"5599.00\",\n" +
-                "            name : \"联想（Lenovo）3000\",\n" +
-                "            image_default : \"/d3/1e/00/a3/37/6c8d49d000b09b1bd0a14c.jpeg\",\n" +
-                "            is_shelf : \"1\",\n" +
-                "            stock : \"100\"\n" +
-                "          },\n" +
-                "          {\n" +
-                "            cart_id : \"7\",\n" +
-                "            quantity : \"10\",\n" +
-                "            price : \"3.00\",\n" +
-                "            name : \"cscs\",\n" +
-                "            image_default : \"/05/4d/d1/1d/4e/4d94028a530deb859f4b85.jpg\",\n" +
-                "            is_shelf : \"1\",\n" +
-                "            stock : \"0\"\n" +
-                "          },\n" +
-                "          {\n" +
-                "            cart_id : \"11\",\n" +
-                "            quantity : \"11\",\n" +
-                "            price : \"5599.00\",\n" +
-                "            name : \"联想（Lenovo） IdeaCentre C340 20英寸一体电脑 （i3-3240T 4G内存 500G硬盘 DVD刻录 WIFI WIN8）白色\",\n" +
-                "            image_default : \"/d3/1e/00/a3/37/6c8d49d000b09b1bd0a14c.jpeg\",\n" +
-                "            is_shelf : \"1\",\n" +
-                "            stock : \"100\"\n" +
-                "          },\n" +
-                "          {\n" +
-                "            cart_id : \"12\",\n" +
-                "            quantity : \"4\",\n" +
-                "            price : \"3.00\",\n" +
-                "            name : \"cscs\",\n" +
-                "            image_default : \"/05/4d/d1/1d/4e/4d94028a530deb859f4b85.jpg\",\n" +
-                "            is_shelf : \"1\",\n" +
-                "            stock : \"0\"\n" +
-                "          }\n" +
-                "        ],\n" +
-                "        sum_amount : 78428,\n" +
-                "        sum_quantity : 28\n" +
-                "      }\n" +
-                "    ],\n" +
-                "    all_amount : 80553,\n" +
-                "    freight : 95\n" +
-                "  }\n" +
-                "}";
-        ShopBean shop = new Gson().fromJson(json, ShopBean.class);
-        showData.showData(shop);
-//        HttpConnect.getInstance().add(new GsonRequest(holder, ShopBean.class));
+//        String json = "{\n" +
+//                "  status : 0,\n" +
+//                "  msg : \"\",\n" +
+//                "  data : \n" +
+//                "  {\n" +
+//                "    list : \n" +
+//                "    [\n" +
+//                "      {\n" +
+//                "        store_name : \"简单的店铺\",\n" +
+//                "        freight : \"45.000\",\n" +
+//                "        carts : \n" +
+//                "        [\n" +
+//                "          {\n" +
+//                "            cart_id : \"8\",\n" +
+//                "            quantity : \"4\",\n" +
+//                "            price : \"31.00\",\n" +
+//                "            name : \"888888VD刻录白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代 WIFI WIN8）白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时代白色打电话黑色的时\",\n" +
+//                "            image_default : \"/4c/b7/45/f7/cc/aa5f62b9617677a24ce7f4.png\",\n" +
+//                "            is_shelf : \"1\",\n" +
+//                "            stock : \"0\"\n" +
+//                "          },\n" +
+//                "          {\n" +
+//                "            cart_id : \"9\",\n" +
+//                "            quantity : \"3\",\n" +
+//                "            price : \"1.00\",\n" +
+//                "            name : \"77777\",\n" +
+//                "            image_default : null,\n" +
+//                "            is_shelf : \"1\",\n" +
+//                "            stock : \"0\"\n" +
+//                "          },\n" +
+//                "          {\n" +
+//                "            cart_id : \"10\",\n" +
+//                "            quantity : \"18\",\n" +
+//                "            price : \"111.00\",\n" +
+//                "            name : \"111\",\n" +
+//                "            image_default : \"/b0/bc/c8/20/54/29da9549a739c51dd695e0.jpg\",\n" +
+//                "            is_shelf : \"1\",\n" +
+//                "            stock : \"11\"\n" +
+//                "          }\n" +
+//                "        ],\n" +
+//                "        sum_amount : 2125,\n" +
+//                "        sum_quantity : 25\n" +
+//                "      },\n" +
+//                "      {\n" +
+//                "        store_name : \"Test_001店铺\",\n" +
+//                "        freight : \"50.000\",\n" +
+//                "        carts : \n" +
+//                "        [\n" +
+//                "          {\n" +
+//                "            cart_id : \"6\",\n" +
+//                "            quantity : \"1\",\n" +
+//                "            price : \"5599.00\",\n" +
+//                "            name : \"联想（Lenovo）2000\",\n" +
+//                "            image_default : \"/d3/1e/00/a3/37/6c8d49d000b09b1bd0a14c.jpeg\",\n" +
+//                "            is_shelf : \"1\",\n" +
+//                "            stock : \"100\"\n" +
+//                "          },\n" +
+//                "          {\n" +
+//                "            cart_id : \"5\",\n" +
+//                "            quantity : \"2\",\n" +
+//                "            price : \"5599.00\",\n" +
+//                "            name : \"联想（Lenovo）3000\",\n" +
+//                "            image_default : \"/d3/1e/00/a3/37/6c8d49d000b09b1bd0a14c.jpeg\",\n" +
+//                "            is_shelf : \"1\",\n" +
+//                "            stock : \"100\"\n" +
+//                "          },\n" +
+//                "          {\n" +
+//                "            cart_id : \"7\",\n" +
+//                "            quantity : \"10\",\n" +
+//                "            price : \"3.00\",\n" +
+//                "            name : \"cscs\",\n" +
+//                "            image_default : \"/05/4d/d1/1d/4e/4d94028a530deb859f4b85.jpg\",\n" +
+//                "            is_shelf : \"1\",\n" +
+//                "            stock : \"0\"\n" +
+//                "          },\n" +
+//                "          {\n" +
+//                "            cart_id : \"11\",\n" +
+//                "            quantity : \"11\",\n" +
+//                "            price : \"5599.00\",\n" +
+//                "            name : \"联想（Lenovo） IdeaCentre C340 20英寸一体电脑 （i3-3240T 4G内存 500G硬盘 DVD刻录 WIFI WIN8）白色\",\n" +
+//                "            image_default : \"/d3/1e/00/a3/37/6c8d49d000b09b1bd0a14c.jpeg\",\n" +
+//                "            is_shelf : \"1\",\n" +
+//                "            stock : \"100\"\n" +
+//                "          },\n" +
+//                "          {\n" +
+//                "            cart_id : \"12\",\n" +
+//                "            quantity : \"4\",\n" +
+//                "            price : \"3.00\",\n" +
+//                "            name : \"cscs\",\n" +
+//                "            image_default : \"/05/4d/d1/1d/4e/4d94028a530deb859f4b85.jpg\",\n" +
+//                "            is_shelf : \"1\",\n" +
+//                "            stock : \"0\"\n" +
+//                "          }\n" +
+//                "        ],\n" +
+//                "        sum_amount : 78428,\n" +
+//                "        sum_quantity : 28\n" +
+//                "      }\n" +
+//                "    ],\n" +
+//                "    all_amount : 80553,\n" +
+//                "    freight : 95\n" +
+//                "  }\n" +
+//                "}";
+//        ShopBean shop = new Gson().fromJson(json, ShopBean.class);
+//        showData.showData(shop);
+        HttpConnect.getInstance().add(new GsonRequest(holder, ShopBean.class));
     }
 
     /**

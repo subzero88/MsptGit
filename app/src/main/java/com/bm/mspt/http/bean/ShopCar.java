@@ -15,16 +15,46 @@ public class ShopCar implements Serializable {
     private String sum_amount; // 总价(不含运费)
     private String sum_quantity; // 总数
     private List<ShopGood> carts; // 该商家的货物
+    private boolean isSelected = false; // 选中状态(非返回值)
+
+    public boolean isSelected() {
+        return isSelected;
+    }
+
+    public void setIsSelected(boolean isSelected) {
+        this.isSelected = isSelected;
+    }
+
+    /**
+     * 设置商家下的商品
+     * @param isSelected
+     */
+    public void setShopGoodsSelected(boolean isSelected) {
+        for (ShopGood good : getCarts()) {
+            good.setIsSelected(isSelected);
+        }
+    }
 
     /**
      * 返回含运费的总价
-     *
-     * @return
      */
     public String getPriceAll() {
-        float amount = Float.parseFloat(sum_amount);
+
+        return ToolsUtil.floatToString(getPriceAllValue());
+    }
+
+    /**
+     * 返回总金额数值
+     */
+    public float getPriceAllValue() {
+        float amount = 0;
         float fare = Float.parseFloat(freight);
-        return ToolsUtil.floatToString(amount + fare);
+        for (ShopGood shopGood : getCarts()) {
+            if (shopGood.isSelected()) {
+                amount += shopGood.getPriceAll();
+            }
+        }
+        return amount;
     }
 
     public String getStore_name() {

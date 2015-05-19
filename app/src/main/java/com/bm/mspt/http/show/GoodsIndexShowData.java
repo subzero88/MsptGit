@@ -5,6 +5,7 @@ import com.bm.mspt.home.IndexGoodsAdapter;
 import com.bm.mspt.http.bean.GoodsBean;
 
 /**
+ * 供货列表
  * Created by zhaol on 2015/4/22.
  */
 public class GoodsIndexShowData implements ShowData<GoodsBean> {

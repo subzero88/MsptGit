@@ -78,10 +78,32 @@ public class ShopAdapter extends BaseExpandableListAdapter {
         } else {
             holder = (GroupHolder) view.getTag();
         }
-        ShopCar shopCar = shopCars.get(i);
+        final ShopCar shopCar = shopCars.get(i);
         holder.txtName.setText(shopCar.getStore_name());
         holder.txtMoney.setText(shopCar.getPriceAll());
         holder.txtFare.setText(shopCar.getFreight());
+        if (shopCar.isSelected()) {
+            holder.button.setSelected(true);
+        } else {
+            holder.button.setSelected(false);
+        }
+        holder.button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (view.isSelected()) {
+                    view.setSelected(false);
+                    shopCar.setIsSelected(false);
+                    shopCar.setShopGoodsSelected(false);
+                    callBack.setSelected(false);
+                } else {
+                    view.setSelected(true);
+                    shopCar.setIsSelected(true);
+                    shopCar.setShopGoodsSelected(true);
+                }
+                setPriceAll();
+                notifyDataSetChanged();
+            }
+        });
         return view;
     }
 
@@ -95,19 +117,52 @@ public class ShopAdapter extends BaseExpandableListAdapter {
         } else {
             holder = (GoodHolder) view.getTag();
         }
-        ShopGood shopGood = shopCars.get(i).getCarts().get(i2);
-        ImageLoader.getInstance().displayImage(HttpService.URL_IMG+shopGood.getImage_default(),holder.img);
+        final ShopCar shopCar = shopCars.get(i);
+        final ShopGood shopGood = shopCars.get(i).getCarts().get(i2);
+        ImageLoader.getInstance().displayImage(HttpService.URL_IMG + shopGood.getImage_default(), holder.img);
         holder.txtName.setText(shopGood.getName());
         holder.txtInfo.setText(shopGood.getName());
         holder.txtPrice.setText(shopGood.getPrice());
         holder.txtCount.setText(shopGood.getQuantity());
-//        if (b) {
-//            View line = new View(context);
-//            line.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-//                    (int)context.getResources().getDimension(R.dimen.shopcar_group_line)));
-//            line.setBackgroundColor(context.getResources().getColor(R.color.gray_shopcar_group_line));
-//            ((LinearLayout)view.findViewById(R.id.adapter_shopcar_layout)).addView(line);
-//        }
+        if (shopGood.isSelected()) {
+            holder.btn.setSelected(true);
+        } else {
+            holder.btn.setSelected(false);
+        }
+        // 选中按钮
+        holder.btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (view.isSelected()) {
+                    view.setSelected(false);
+                    shopGood.setIsSelected(false);
+                    shopCar.setIsSelected(false);
+                    callBack.setSelected(false);
+                } else {
+                    view.setSelected(true);
+                    shopGood.setIsSelected(true);
+                }
+                setPriceAll();
+                notifyDataSetChanged();
+            }
+        });
+        // 加减数量
+        holder.imgAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                shopGood.addCount();
+                setPriceAll();
+                notifyDataSetChanged();
+            }
+        });
+        holder.imgDel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                shopGood.delCount();
+                setPriceAll();
+                notifyDataSetChanged();
+            }
+        });
         return view;
     }
 
@@ -129,6 +184,29 @@ public class ShopAdapter extends BaseExpandableListAdapter {
     }
 
     /**
+     * 全选
+     */
+    public void selectedAll(boolean isSelected) {
+        for (ShopCar shopCar : shopCars) {
+            shopCar.setIsSelected(isSelected);
+            shopCar.setShopGoodsSelected(isSelected);
+        }
+        setPriceAll();
+        notifyDataSetChanged();
+    }
+
+    /**
+     * 设置总金额
+     */
+    private void setPriceAll() {
+        float priceAll = 0;
+        for (ShopCar shopCar : shopCars) {
+            priceAll += shopCar.getPriceAllValue();
+        }
+        callBack.setPriceAll(String.valueOf(priceAll));
+    }
+
+    /**
      * 商家布局
      */
     private class GroupHolder {
@@ -136,12 +214,14 @@ public class ShopAdapter extends BaseExpandableListAdapter {
         public TextView txtName;
         public TextView txtMoney;
         public TextView txtFare;
+        public Button button;
 
         public GroupHolder() {
             view = View.inflate(context, R.layout.adapter_store, null);
             txtName = (TextView) view.findViewById(R.id.adapter_store_txt_name);
             txtMoney = (TextView) view.findViewById(R.id.adapter_store_txt_money);
             txtFare = (TextView) view.findViewById(R.id.adapter_store_txt_fare);
+            button = (Button) view.findViewById(R.id.adapter_store_btn);
         }
     }
 

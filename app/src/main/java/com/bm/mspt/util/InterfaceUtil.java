@@ -14,7 +14,7 @@ public class InterfaceUtil {
          * 加载更多
          * @param page
          */
-        public void loadMore(int page);
+        void loadMore(int page);
     }
 
     /**
@@ -22,13 +22,15 @@ public class InterfaceUtil {
      */
     public interface OnVerifyErrorCallBack {
         // 获取验证码错误
-        public void onVerifyError();
+        void onVerifyError();
     }
 
     /**
      * 展开可扩展列表
      */
     public interface OnExpandListViewCallBack {
-        public void expandListView();
+        void expandListView(); // 展开列表
+        void setSelected(boolean isSelected); // 全选
+        void setPriceAll(String priceAll); // 设置金额
     }
 }

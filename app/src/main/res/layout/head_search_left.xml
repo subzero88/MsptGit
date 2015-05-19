@@ -10,14 +10,15 @@
         android:layout_height="@dimen/common_head_search_height"
         android:layout_centerInParent="true"
         android:background="@drawable/index_search_bg">
-
+<!--
         <EditText
             android:id="@+id/head_edt"
             style="@style/head_edt"
             android:layout_width="@dimen/common_head_edt_width"
             android:layout_height="@dimen/common_head_edt_height"
-            android:layout_centerInParent="true"/>
-
+            android:layout_centerInParent="true"
+            android:editable="false"/>
+-->
     </RelativeLayout>
 
     <ImageView
